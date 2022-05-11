@@ -87,7 +87,32 @@ load_RNA_RPM = function(){
   data.table_2_matrix(exp_rpm_dt[])
 }
 
+#' load_ref_gr
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#' load_ref_gr()
+load_ref_gr = function(){
+  ref_gr = rtracklayer::import.gff(file.path(data_path, "gencode.v36.annotation.gtf"), feature.type = "gene")
+  names(ref_gr) = ref_gr$gene_id
+  ref_gr
+}
 
-
-
+#' load_splice_clusters
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#' load_splice_clusters()
+load_splice_clusters = function(){
+  splice_clust_dt = data.table::fread(file.path(data_path, "TARGET_IKZF1_splicing_clusters.csv"))
+  splice_clust_dt[, sample_id := tstrsplit(sample, "\\.", keep = 3)]
+  splice_clust_dt[, ik_status := "normal_splicing"]
+  splice_clust_dt[cluster_id == 3, ik_status := "IK6"]
+  splice_clust_dt[cluster_id %in% c(1, 2), ik_status := "early_termination"]
+  splice_clust_dt[]
+}
 

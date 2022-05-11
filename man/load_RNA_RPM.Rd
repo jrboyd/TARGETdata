@@ -12,3 +12,6 @@ load_RNA_RPM()
 \description{
 load_RNA_RPM
 }
+\examples{
+load_RNA_RPM()
+}

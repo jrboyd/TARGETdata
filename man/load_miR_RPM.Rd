@@ -12,3 +12,6 @@ load_miR_RPM()
 \description{
 load_miR_RPM
 }
+\examples{
+load_miR_RPM()
+}

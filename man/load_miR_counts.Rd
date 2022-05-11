@@ -12,3 +12,6 @@ load_miR_counts()
 \description{
 load_miR_counts
 }
+\examples{
+load_miR_counts()
+}

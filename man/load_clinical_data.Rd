@@ -12,3 +12,6 @@ load_clinical_data()
 \description{
 load_clinical_data
 }
+\examples{
+load_clinical_data()
+}

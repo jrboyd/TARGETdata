@@ -12,3 +12,6 @@ load_RNA_counts()
 \description{
 load_RNA_counts
 }
+\examples{
+load_RNA_counts()
+}

@@ -4,13 +4,30 @@
 \alias{write_DESeq_results}
 \title{write_DESeq_results}
 \usage{
-write_DESeq_results(des, analysis_name, contrast_VAR = "ik_status")
+write_DESeq_results(
+  des,
+  analysis_name,
+  contrast_VAR = "ik_status",
+  min_log2FoldChange = 1,
+  max_padj = 0.05,
+  min_baseMean = 1
+)
 }
 \arguments{
-\item{contrast_VAR}{}
+\item{des}{A "DESeqDataSet" object, as returned from run_DESeq.}
+
+\item{analysis_name}{Required prefix for output files.}
+
+\item{contrast_VAR}{Variable in meta_dt to use for simple contrast. Default is "ik_status".}
+
+\item{min_log2FoldChange}{Minimum absolute value of log2FoldChange. Default is 1 (2 fold).}
+
+\item{max_padj}{Maximum padj. Default is .05.}
+
+\item{min_baseMean}{Minimum baseMean. Default is 1.}
 }
 \value{
-
+returns list of file path to full and significant results.
 }
 \description{
 write_DESeq_results

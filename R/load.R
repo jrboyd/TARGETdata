@@ -40,7 +40,7 @@ load_miR_counts = function(){
   mir_cnt_dt[, miRNA_ID := paste(miRNA_ID, `cross-mapped`, sep = "-")]
   mir_cnt_dt$`cross-mapped` = NULL
   data.table::setnames(mir_cnt_dt, "miRNA_ID", "gene_id")
-  data.table_2_matrix(mir_cnt_dt[])
+  convert_data.table_2_matrix(mir_cnt_dt[])
 }
 
 #' load_miR_RPM
@@ -55,7 +55,7 @@ load_miR_RPM = function(){
   mir_rpm_dt[, miRNA_ID := paste(miRNA_ID, `cross-mapped`, sep = "-")]
   mir_rpm_dt$`cross-mapped` = NULL
   data.table::setnames(mir_rpm_dt, "miRNA_ID", "gene_id")
-  data.table_2_matrix(mir_rpm_dt[])
+  convert_data.table_2_matrix(mir_rpm_dt[])
 }
 
 #' load_RNA_counts
@@ -68,7 +68,7 @@ load_miR_RPM = function(){
 load_RNA_counts = function(){
   exp_cnt_dt = data.table::fread(file.path(data_path, "TARGET_expression.csv"))
   colnames(exp_cnt_dt)[-1] = sapply(strsplit(colnames(exp_cnt_dt)[-1], "\\."), function(x)x[3])
-  data.table_2_matrix(exp_cnt_dt[])
+  convert_data.table_2_matrix(exp_cnt_dt[])
 }
 
 #' load_RNA_RPM
@@ -84,7 +84,7 @@ load_RNA_RPM = function(){
   data.table::setnames(exp_rpm_dt, c("gene_id", "sample_id", "value"))
   exp_rpm_dt[, rpm := value / sum(value) * 1e6, list(sample_id)]
   exp_rpm_dt = dcast(exp_rpm_dt, gene_id~sample_id, value.var = "rpm")
-  data.table_2_matrix(exp_rpm_dt[])
+  convert_data.table_2_matrix(exp_rpm_dt[])
 }
 
 #' load_ref_gr
@@ -93,7 +93,7 @@ load_RNA_RPM = function(){
 #' @export
 #'
 #' @examples
-#' load_ref_gr()
+#' load_ref_gr
 load_ref_gr = function(){
   ref_gr = rtracklayer::import.gff(file.path(data_path, "gencode.v36.annotation.gtf"), feature.type = "gene")
   names(ref_gr) = ref_gr$gene_id
@@ -113,6 +113,6 @@ load_splice_clusters = function(){
   splice_clust_dt[, ik_status := "normal_splicing"]
   splice_clust_dt[cluster_id == 3, ik_status := "IK6"]
   splice_clust_dt[cluster_id %in% c(1, 2), ik_status := "early_termination"]
-  splice_clust_dt[]
+  splice_clust_dt[, list(sample_id, cluster_id, ik_status)]
 }
 

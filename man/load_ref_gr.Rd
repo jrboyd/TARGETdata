@@ -13,5 +13,5 @@ load_ref_gr()
 load_ref_gr
 }
 \examples{
-load_ref_gr()
+load_ref_gr
 }

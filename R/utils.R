@@ -1,4 +1,4 @@
-#' sample_id_2_patient_id
+#' convert_sample_id_2_patient_id
 #'
 #' @param ids extracts patient_id from sample IDs
 #'
@@ -10,15 +10,15 @@
 #'   "TARGET-15-SJMPAL043508-04B-01R",
 #'   "TARGET-15-SJMPAL043511-09B-01R",
 #'   "TARGET-15-SJMPAL043512-03A-01R")
-#' sample_id_2_patient_id(sample_ids)
-sample_id_2_patient_id = function(ids){
+#' convert_sample_id_2_patient_id(sample_ids)
+convert_sample_id_2_patient_id = function(ids){
   ids = sub(".+TARGET", "TARGET", ids)
   sapply(strsplit(ids, "-"), function(x){
     paste(x[1:3], collapse = "-")
   })
 }
 
-#' sample_id_2_sample_code
+#' convert_sample_id_2_sample_code
 #'
 #' @param ids
 #'
@@ -30,8 +30,8 @@ sample_id_2_patient_id = function(ids){
 #'   "TARGET-15-SJMPAL043508-04B-01R",
 #'   "TARGET-15-SJMPAL043511-09B-01R",
 #'   "TARGET-15-SJMPAL043512-03A-01R")
-#' sample_id_2_sample_code(sample_ids)
-sample_id_2_sample_code = function(ids){
+#' convert_sample_id_2_sample_code(sample_ids)
+convert_sample_id_2_sample_code = function(ids){
   ids = sub(".+TARGET", "TARGET", ids)
   codes = sapply(strsplit(ids, "-"), function(x){
     x[4]
@@ -51,9 +51,9 @@ sample_id_2_sample_code = function(ids){
 #' @rdname conversion
 #' @examples
 #' mat = load_miR_counts()
-#' dt = matrix_2_data.table(mat)
-#' mat2 = data.table_2_matrix(dt)
-data.table_2_matrix = function(dt){
+#' dt = convert_matrix_2_data.table(mat)
+#' mat2 = convert_data.table_2_matrix(dt)
+convert_data.table_2_matrix = function(dt){
   if(!is.null(dt$sample_id)){
     dt.wide = dcast(dt, gene_id~sample_id)
   }else{
@@ -65,7 +65,7 @@ data.table_2_matrix = function(dt){
   mat
 }
 
-#' matrix_2_data.table
+#' convert_matrix_2_data.table
 #'
 #' @param mat
 #'
@@ -73,8 +73,43 @@ data.table_2_matrix = function(dt){
 #' @export
 #'
 #' @rdname conversion
-matrix_2_data.table = function(mat){
+convert_matrix_2_data.table = function(mat){
   dt = data.table::as.data.table(reshape2::melt(mat))
   setnames(dt, c("gene_id", "sample_id", "value"))
   dt[]
+}
+
+#' Title
+#'
+#' @return
+#' @export
+#'
+#' @examples
+get_out_dir = function(){
+  getOption("out_dir", "output")
+}
+
+#' Title
+#'
+#' @param new_out_dir
+#'
+#' @return
+#' @export
+#'
+#' @examples
+set_out_dir = function(new_out_dir){
+  options(out_dir = new_out_dir)
+}
+
+#' Title
+#'
+#' @param f
+#'
+#' @return
+#' @export
+#'
+#' @examples
+res_file = function(f){
+  dir.create(get_out_dir(), showWarnings = FALSE)
+  file.path(get_out_dir(), f)
 }

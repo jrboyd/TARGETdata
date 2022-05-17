@@ -15,30 +15,35 @@ test_that("load and convert", {
     testthat::expect_is(rna_rpm_mat, "matrix")
 
     ### to tidy data.table
-    mir_cnt_dt = matrix_2_data.table(mir_cnt_mat)
+    mir_cnt_dt = convert_matrix_2_data.table(mir_cnt_mat)
     testthat::expect_is(mir_cnt_dt, "data.table")
 
-    mir_rpm_dt = matrix_2_data.table(mir_rpm_mat)
+    mir_rpm_dt = convert_matrix_2_data.table(mir_rpm_mat)
     testthat::expect_is(mir_rpm_dt, "data.table")
 
-    rna_cnt_dt = matrix_2_data.table(rna_cnt_mat)
+    rna_cnt_dt = convert_matrix_2_data.table(rna_cnt_mat)
     testthat::expect_is(rna_cnt_dt, "data.table")
 
-    rna_rpm_dt = matrix_2_data.table(rna_rpm_mat)
+    rna_rpm_dt = convert_matrix_2_data.table(rna_rpm_mat)
     testthat::expect_is(rna_rpm_dt, "data.table")
 
     ### back to matrix
-    mir_cnt_mat2 = data.table_2_matrix(mir_cnt_dt)
+    mir_cnt_mat2 = convert_data.table_2_matrix(mir_cnt_dt)
     testthat::expect_is(mir_cnt_mat2, "matrix")
 
-    mir_rpm_mat2 = data.table_2_matrix(mir_rpm_dt)
+    mir_rpm_mat2 = convert_data.table_2_matrix(mir_rpm_dt)
     testthat::expect_is(mir_rpm_mat2, "matrix")
 
-    rna_cnt_mat2 = data.table_2_matrix(rna_cnt_dt)
+    rna_cnt_mat2 = convert_data.table_2_matrix(rna_cnt_dt)
     testthat::expect_is(rna_cnt_mat2, "matrix")
 
-    rna_rpm_mat2 = data.table_2_matrix(rna_rpm_dt)
+    rna_rpm_mat2 = convert_data.table_2_matrix(rna_rpm_dt)
     testthat::expect_is(rna_rpm_mat2, "matrix")
 
 })
 
+test_that("load ref", {
+  ref_gr = load_ref_gr()
+  expect_is(names(ref_gr), "character")
+  expect_equal(names(ref_gr), ref_gr$gene_id)
+})

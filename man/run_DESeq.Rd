@@ -4,14 +4,35 @@
 \alias{run_DESeq}
 \title{run_DESeq}
 \usage{
-run_DESeq(mat, meta_dt, exp_cache_file, contrast_VAR = "ik_status")
+run_DESeq(mat, meta_dt, cache_file = NULL, contrast_VAR = "ik_status")
 }
 \arguments{
-\item{contrast_VAR}{}
+\item{mat}{expression count matrix, use load_RNA_counts() or load_miR_counts()}
+
+\item{meta_dt}{meta data, suitable for colData() when running DESeq, use load_clinical_data()}
+
+\item{cache_file}{File to use for caching results.  Will be loaded if it exists. Default is NULL and disables caching.}
+
+\item{contrast_VAR}{Variable in meta_dt to use for simple contrast. Default is "ik_status".}
 }
 \value{
-
+result of DESeq
 }
 \description{
 run_DESeq
+}
+\examples{
+mat = load_RNA_counts()
+
+mat = filter_expression_to_valid(mat)
+meta_dt = make_meta_dt(mat)
+
+#filter to no more than 10 per group
+meta_dt = meta_dt[ Phase \%in\% c("Phase_II_Discovery", "Phase_II_Validation") & sample_type_short == "TBM"]
+meta_dt[, rnk := frank(runif(.N), ties.method = "random"), .(ik_status)]
+meta_dt = meta_dt[rnk <= 10]
+
+mat = filter_expression_to_valid(mat, meta_dt)
+
+des = run_DESeq(mat, meta_dt)
 }

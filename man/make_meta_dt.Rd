@@ -5,7 +5,12 @@
 \alias{make_meta_dt.full}
 \title{make_meta_dt}
 \usage{
-make_meta_dt(dt, clin_dt = load_clinical_data(), include_all = FALSE)
+make_meta_dt(
+  dt,
+  clin_dt = load_clinical_data(),
+  splice_clust_dt = load_splice_clusters(),
+  include_all = FALSE
+)
 
 make_meta_dt.full(dt, clin_dt = load_clinical_data())
 }
@@ -26,9 +31,10 @@ make_meta_dt.full
 }
 \examples{
 mat = load_miR_RPM()
-make_meta_dt(mat)
+mat = filter_expression_to_valid(mat)
+meta_dt = make_meta_dt(mat)
 
-dt = matrix_2_data.table(mat)
+dt = convert_matrix_2_data.table(mat)
 make_meta_dt(dt)
 
 make_meta_dt.full(mat)

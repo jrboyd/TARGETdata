@@ -4,7 +4,7 @@
 \alias{plot_survival_discovery_vs_validation}
 \title{plot_survival_discovery_vs_validation}
 \usage{
-plot_survival_discovery_vs_validation(surv_res_dt)
+plot_survival_discovery_vs_validation(surv_res_dt, n_labels = 10)
 }
 \arguments{
 \item{surv_res_dt}{}

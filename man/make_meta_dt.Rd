@@ -9,7 +9,8 @@ make_meta_dt(
   dt,
   clin_dt = load_clinical_data(),
   splice_clust_dt = load_splice_clusters(),
-  include_all = FALSE
+  include_all = FALSE,
+  extra_vars_included = character()
 )
 
 make_meta_dt.full(dt, clin_dt = load_clinical_data())

@@ -4,7 +4,7 @@
 \alias{TARGETdata.runApp}
 \title{TARGETdata.runApp}
 \usage{
-TARGETdata.runApp(et)
+TARGETdata.runApp()
 }
 \arguments{
 \item{et}{TARGETdata object}

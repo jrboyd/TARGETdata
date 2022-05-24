@@ -15,7 +15,11 @@
 #'
 #' dt = convert_matrix_2_data.table(mat)
 #' make_meta_dt(dt)
-make_meta_dt = function(dt, clin_dt = load_clinical_data(), splice_clust_dt = load_splice_clusters(), include_all = FALSE){
+make_meta_dt = function(dt,
+                        clin_dt = load_clinical_data(),
+                        splice_clust_dt = load_splice_clusters(),
+                        include_all = FALSE,
+                        extra_vars_included = character()){
   if(is.matrix(dt)){
     ids = colnames(dt)
   }else{
@@ -26,7 +30,9 @@ make_meta_dt = function(dt, clin_dt = load_clinical_data(), splice_clust_dt = lo
   if(include_all){
     meta_dt = merge(meta_dt, clin_dt, by = "patient_id")
   }else{
-    meta_dt = merge(meta_dt, clin_dt[, .(patient_id, Phase, Vital.Status, Overall.Survival.Time.in.Days)], by = "patient_id")
+    meta_dt = merge(meta_dt,
+                    clin_dt[, c("patient_id", "Phase", "Vital.Status", "Overall.Survival.Time.in.Days", extra_vars_included), with = FALSE],
+                    by = "patient_id")
   }
   setnames(meta_dt, c("Vital.Status", "Overall.Survival.Time.in.Days"), c("vital_status", "days_to_last_follow_up"))
   meta_dt[, days_to_death := ifelse(vital_status == "Dead", days_to_last_follow_up, NA) ]

@@ -9,14 +9,9 @@ TARGETdata.runApp()
 \arguments{
 \item{et}{TARGETdata object}
 }
-\value{
-
-}
 \description{
 TARGETdata.runApp
 }
 \examples{
-ex_data = system.file("extdata/test_TARGETdata", package = "TARGETdata", mustWork = TRUE)
-et = TARGETdata.load(ex_data)
-TARGETdata.runApp(et)
+TARGETdata.runApp()
 }

@@ -6,9 +6,6 @@
 \usage{
 load_clinical_data()
 }
-\value{
-
-}
 \description{
 load_clinical_data
 }

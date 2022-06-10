@@ -6,9 +6,6 @@
 \usage{
 load_RNA_counts()
 }
-\value{
-
-}
 \description{
 load_RNA_counts
 }

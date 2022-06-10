@@ -18,9 +18,6 @@ surv_fun.z(
 \arguments{
 \item{return_data_only}{if TRUE, omit all plots and only return data}
 }
-\value{
-
-}
 \description{
 surv_fun.z
 }

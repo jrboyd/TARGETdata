@@ -6,9 +6,6 @@
 \usage{
 load_miR_counts()
 }
-\value{
-
-}
 \description{
 load_miR_counts
 }

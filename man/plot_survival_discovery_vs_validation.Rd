@@ -9,9 +9,6 @@ plot_survival_discovery_vs_validation(surv_res_dt, n_labels = 10)
 \arguments{
 \item{surv_res_dt}{}
 }
-\value{
-
-}
 \description{
 plot_survival_discovery_vs_validation
 }

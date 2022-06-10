@@ -9,9 +9,6 @@ set_out_dir(new_out_dir)
 \arguments{
 \item{new_out_dir}{}
 }
-\value{
-
-}
 \description{
 Title
 }

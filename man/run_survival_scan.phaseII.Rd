@@ -11,7 +11,9 @@ run_survival_scan.phaseII(
   meta_dt = load_clinical_data(),
   n_todo = length(goi_todo),
   n_cores = getOption("mc.cores", 1),
-  title_FUN = function(goi) {     goi }
+  title_FUN = function(goi) {
+     goi
+ }
 )
 }
 \arguments{

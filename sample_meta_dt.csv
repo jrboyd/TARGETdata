@@ -1,0 +1,666 @@
+sample_id,sample_code,patient_id,Phase,vital_status,days_to_last_follow_up,cell_of_origin,days_to_death,sample_type,sample_type_short,cluster_id,ik_status,RNA,WGS,miR
+TARGET-10-DCC001-03,03,TARGET-10-DCC001,Phase_I,"",,"",,Primary Blood Derived Cancer - Peripheral Blood,TB,5,normal_splicing,present,-,-
+TARGET-10-DCC002-09,09,TARGET-10-DCC002,Phase_I,"",,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,3,IK6,present,-,-
+TARGET-10-PAKHZT-03,03,TARGET-10-PAKHZT,Phase_I,Dead,605,"B precursor (Non-T, Non-B ALL)",605,Primary Blood Derived Cancer - Peripheral Blood,TB,6,normal_splicing,present,-,-
+TARGET-10-PAKKCA-03,03,TARGET-10-PAKKCA,Phase_I,Dead,1110,"B precursor (Non-T, Non-B ALL)",1110,Primary Blood Derived Cancer - Peripheral Blood,TB,3,IK6,present,-,-
+TARGET-10-PAKKXB-03,03,TARGET-10-PAKKXB,Phase_I,Alive,2097,"B precursor (Non-T, Non-B ALL)",,Primary Blood Derived Cancer - Peripheral Blood,TB,1,early_termination,present,-,-
+TARGET-10-PAKSWW-03,03,TARGET-10-PAKSWW,Phase_I,Dead,1592,"B precursor (Non-T, Non-B ALL)",1592,Primary Blood Derived Cancer - Peripheral Blood,TB,1,early_termination,present,-,-
+TARGET-10-PAKSWW-04,04,TARGET-10-PAKSWW,Phase_I,Dead,1592,"B precursor (Non-T, Non-B ALL)",1592,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,2,early_termination,present,-,present
+TARGET-10-PAKTAL-03,03,TARGET-10-PAKTAL,Phase_I,Dead,1061,"B precursor (Non-T, Non-B ALL)",1061,Primary Blood Derived Cancer - Peripheral Blood,TB,1,early_termination,present,-,-
+TARGET-10-PAKVKK-03,03,TARGET-10-PAKVKK,Phase_I,Alive,4193,"B precursor (Non-T, Non-B ALL)",,Primary Blood Derived Cancer - Peripheral Blood,TB,1,early_termination,present,-,-
+TARGET-10-PAKYEP-03,03,TARGET-10-PAKYEP,Phase_I,Alive,2463,"B precursor (Non-T, Non-B ALL)",,Primary Blood Derived Cancer - Peripheral Blood,TB,3,IK6,present,-,-
+TARGET-10-PALETF-03,03,TARGET-10-PALETF,Phase_I,Dead,768,"B precursor (Non-T, Non-B ALL)",768,Primary Blood Derived Cancer - Peripheral Blood,TB,6,normal_splicing,present,-,-
+TARGET-10-PALIBN-09,09,TARGET-10-PALIBN,Phase_I,Dead,1041,"B precursor (Non-T, Non-B ALL)",1041,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PALJDL-09,09,TARGET-10-PALJDL,Phase_I,Alive,4750,Indeterminate : T vs B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,-
+TARGET-10-PAMDRM-09,09,TARGET-10-PAMDRM,Phase_I,Dead,1213,"B precursor (Non-T, Non-B ALL)",1213,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,-
+TARGET-10-PAMXHJ-09,09,TARGET-10-PAMXHJ,Phase_II_Discovery,Alive,4089,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,present
+TARGET-10-PAMXSP-09,09,TARGET-10-PAMXSP,Phase_II_Discovery,Alive,4383,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PANATY-09,09,TARGET-10-PANATY,Dicentric,Alive,4077,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,3,IK6,present,present,present
+TARGET-10-PANCVR-03,03,TARGET-10-PANCVR,Phase_II_Discovery,Dead,473,B-Precursor,473,Primary Blood Derived Cancer - Peripheral Blood,TB,2,early_termination,present,-,present
+TARGET-10-PANCVR-04,04,TARGET-10-PANCVR,Phase_II_Discovery,Dead,473,B-Precursor,473,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,6,normal_splicing,present,-,-
+TARGET-10-PANDBX-09,09,TARGET-10-PANDBX,Dicentric,Dead,1719,B-Precursor,1719,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,present,present
+TARGET-10-PANDWE-03,03,TARGET-10-PANDWE,Phase_II_Discovery,Dead,1571,B-Precursor,1571,Primary Blood Derived Cancer - Peripheral Blood,TB,2,early_termination,present,-,-
+TARGET-10-PANEHF-09,09,TARGET-10-PANEHF,Phase_I,Alive,1299,B Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PANEUH-09,09,TARGET-10-PANEUH,Phase_II_Discovery,Alive,4132,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,present
+TARGET-10-PANFNZ-03,03,TARGET-10-PANFNZ,Phase_II_Discovery,Dead,2778,B-Precursor,2778,Primary Blood Derived Cancer - Peripheral Blood,TB,2,early_termination,present,-,present
+TARGET-10-PANGIF-03,03,TARGET-10-PANGIF,Phase_II_Discovery,Dead,428,B-Precursor,428,Primary Blood Derived Cancer - Peripheral Blood,TB,2,early_termination,present,-,present
+TARGET-10-PANIEU-03,03,TARGET-10-PANIEU,Phase_II_Discovery,Dead,526,B-Precursor,526,Primary Blood Derived Cancer - Peripheral Blood,TB,3,IK6,present,-,present
+TARGET-10-PANJPG-09,09,TARGET-10-PANJPG,Phase_II_Discovery,Alive,4072,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PANJWJ-09,09,TARGET-10-PANJWJ,Phase_II_Discovery,Alive,3684,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,present
+TARGET-10-PANKAK-04,04,TARGET-10-PANKAK,Phase_II_Discovery,Dead,1095,B-Precursor,1095,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,1,early_termination,present,-,present
+TARGET-10-PANKAK-09,09,TARGET-10-PANKAK,Phase_II_Discovery,Dead,1095,B-Precursor,1095,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PANKAK-09,09,TARGET-10-PANKAK,Phase_II_Discovery,Dead,1095,B-Precursor,1095,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,present
+TARGET-10-PANKDT-03,03,TARGET-10-PANKDT,Phase_II_Discovery,Alive,3859,B-Precursor,,Primary Blood Derived Cancer - Peripheral Blood,TB,6,normal_splicing,present,-,present
+TARGET-10-PANKGK-09,09,TARGET-10-PANKGK,Phase_II_Discovery,Alive,2034,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PANKMB-09,09,TARGET-10-PANKMB,Phase_II_Discovery,Alive,4175,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,present
+TARGET-10-PANKRG-03,03,TARGET-10-PANKRG,Phase_II_Discovery,Alive,3932,B-Precursor,,Primary Blood Derived Cancer - Peripheral Blood,TB,2,early_termination,present,-,present
+TARGET-10-PANLGK-03,03,TARGET-10-PANLGK,Dicentric,Alive,2597,B-Precursor,,Primary Blood Derived Cancer - Peripheral Blood,TB,5,normal_splicing,present,present,present
+TARGET-10-PANLIC-09,09,TARGET-10-PANLIC,Phase_II_Discovery,Alive,4015,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,present
+TARGET-10-PANLIC-09,09,TARGET-10-PANLIC,Phase_II_Discovery,Alive,4015,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,present
+TARGET-10-PANNGL-09,09,TARGET-10-PANNGL,Phase_II_Discovery,Alive,2514,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,-
+TARGET-10-PANPJI-09,09,TARGET-10-PANPJI,Phase_II_Discovery,Alive,4081,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,present
+TARGET-10-PANRDC-03,03,TARGET-10-PANRDC,Phase_II_Discovery,Alive,3832,B-Precursor,,Primary Blood Derived Cancer - Peripheral Blood,TB,1,early_termination,present,-,present
+TARGET-10-PANRDC-03,03,TARGET-10-PANRDC,Phase_II_Discovery,Alive,3832,B-Precursor,,Primary Blood Derived Cancer - Peripheral Blood,TB,6,normal_splicing,present,-,present
+TARGET-10-PANRWG-09,09,TARGET-10-PANRWG,Phase_II_Discovery,Alive,3769,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,present
+TARGET-10-PANRYM-09,09,TARGET-10-PANRYM,Phase_II_Discovery,Alive,1675,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PANSBK-03,03,TARGET-10-PANSBK,Dicentric,Unknown,1179,B-Precursor,,Primary Blood Derived Cancer - Peripheral Blood,TB,6,normal_splicing,present,present,present
+TARGET-10-PANSBR-09,09,TARGET-10-PANSBR,Phase_II_Discovery,Dead,1688,B-Precursor,1688,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,present
+TARGET-10-PANSDA-04,04,TARGET-10-PANSDA,Phase_II_Discovery,Dead,1141,B-Precursor,1141,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,2,early_termination,present,-,present
+TARGET-10-PANSDA-09,09,TARGET-10-PANSDA,Phase_II_Discovery,Dead,1141,B-Precursor,1141,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,-
+TARGET-10-PANSFD-09,09,TARGET-10-PANSFD,Phase_II_Discovery,Dead,561,B-Precursor,561,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,-
+TARGET-10-PANSHK-04,04,TARGET-10-PANSHK,Phase_II_Validation,Dead,2447,B Cell ALL,2447,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,6,normal_splicing,present,-,present
+TARGET-10-PANSHK-09,09,TARGET-10-PANSHK,Phase_II_Validation,Dead,2447,B Cell ALL,2447,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,present
+TARGET-10-PANSIA-09,09,TARGET-10-PANSIA,Phase_II_Discovery,Alive,3931,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,-
+TARGET-10-PANSPW-09,09,TARGET-10-PANSPW,Phase_II_Discovery,Dead,870,B-Precursor,870,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,present
+TARGET-10-PANSUL-09,09,TARGET-10-PANSUL,Phase_II_Discovery,Dead,1068,B-Precursor,1068,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PANSXG-09,09,TARGET-10-PANSXG,Phase_II_Discovery,Alive,3830,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PANTSM-04,04,TARGET-10-PANTSM,Phase_II_Discovery,Dead,1214,B-Precursor,1214,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,1,early_termination,present,-,present
+TARGET-10-PANTSM-04,04,TARGET-10-PANTSM,Phase_II_Discovery,Dead,1214,B-Precursor,1214,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,3,IK6,present,-,present
+TARGET-10-PANTSM-09,09,TARGET-10-PANTSM,Phase_II_Discovery,Dead,1214,B-Precursor,1214,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PANTTZ-09,09,TARGET-10-PANTTZ,Dicentric,Alive,3642,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,3,IK6,present,present,present
+TARGET-10-PANUHA-09,09,TARGET-10-PANUHA,Phase_II_Discovery,Alive,4017,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,present
+TARGET-10-PANUSN-03,03,TARGET-10-PANUSN,Phase_II_Discovery,Dead,1715,B-Precursor,1715,Primary Blood Derived Cancer - Peripheral Blood,TB,1,early_termination,present,-,present
+TARGET-10-PANUSN-04,04,TARGET-10-PANUSN,Phase_II_Discovery,Dead,1715,B-Precursor,1715,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,1,early_termination,present,-,present
+TARGET-10-PANUUF-09,09,TARGET-10-PANUUF,Phase_II_Discovery,Alive,3911,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PANWEZ-09,09,TARGET-10-PANWEZ,Dicentric,Unknown,3145,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-10-PANWFB-09,09,TARGET-10-PANWFB,Phase_II_Discovery,Alive,2939,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,present
+TARGET-10-PANWHJ-09,09,TARGET-10-PANWHJ,Phase_II_Discovery,Alive,3770,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PANWHW-09,09,TARGET-10-PANWHW,Phase_II_Discovery,Alive,1916,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,present
+TARGET-10-PANWHW-09,09,TARGET-10-PANWHW,Phase_II_Discovery,Alive,1916,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,present
+TARGET-10-PANWVW-09,09,TARGET-10-PANWVW,Phase_II_Discovery,Alive,3567,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PANWYH-09,09,TARGET-10-PANWYH,Dicentric,Dead,1418,B-Precursor,1418,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,present,present
+TARGET-10-PANWYH-09,09,TARGET-10-PANWYH,Dicentric,Dead,1418,B-Precursor,1418,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,present,present
+TARGET-10-PANXDB-03,03,TARGET-10-PANXDB,Phase_II_Discovery,Alive,3737,B-Precursor,,Primary Blood Derived Cancer - Peripheral Blood,TB,1,early_termination,present,-,present
+TARGET-10-PANXDR-09,09,TARGET-10-PANXDR,Phase_II_Discovery,Alive,3801,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,present
+TARGET-10-PANXPE-04,04,TARGET-10-PANXPE,Phase_II_Discovery,Alive,3365,B-Precursor,,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,2,early_termination,present,-,present
+TARGET-10-PANYEJ-09,09,TARGET-10-PANYEJ,Phase_II_Discovery,Alive,3875,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,present
+TARGET-10-PANYGB-04,04,TARGET-10-PANYGB,Phase_II_Validation,Dead,2110,B Cell ALL,2110,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,1,early_termination,present,-,present
+TARGET-10-PANYGB-09,09,TARGET-10-PANYGB,Phase_II_Validation,Dead,2110,B Cell ALL,2110,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,present
+TARGET-10-PANYYV-04,04,TARGET-10-PANYYV,Phase_II_Discovery,Alive,3122,B-Precursor,,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,1,early_termination,present,-,present
+TARGET-10-PANYZE-09,09,TARGET-10-PANYZE,Phase_II_Validation,Dead,3065,B Cell ALL,3065,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PANZPJ-04,04,TARGET-10-PANZPJ,Phase_II_Discovery,Dead,953,B-Precursor,953,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,2,early_termination,present,-,present
+TARGET-10-PANZPJ-09,09,TARGET-10-PANZPJ,Phase_II_Discovery,Dead,953,B-Precursor,953,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PANZXZ-03,03,TARGET-10-PANZXZ,Phase_II_Discovery,Alive,2970,B-Precursor,,Primary Blood Derived Cancer - Peripheral Blood,TB,1,early_termination,present,-,-
+TARGET-10-PAPACP-04,04,TARGET-10-PAPACP,Phase_II_Discovery,Dead,2378,B-Precursor,2378,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,1,early_termination,present,-,-
+TARGET-10-PAPAGK-04,04,TARGET-10-PAPAGK,Phase_II_Discovery,Alive,3529,B-Precursor,,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,2,early_termination,present,-,-
+TARGET-10-PAPAGK-09,09,TARGET-10-PAPAGK,Phase_II_Discovery,Alive,3529,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PAPAIZ-09,09,TARGET-10-PAPAIZ,Phase_II_Discovery,Alive,3632,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,present
+TARGET-10-PAPAXK-09,09,TARGET-10-PAPAXK,Dicentric,Alive,3790,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,3,IK6,present,present,present
+TARGET-10-PAPBCI-09,09,TARGET-10-PAPBCI,Phase_II_Discovery,Dead,3085,B-Precursor,3085,Primary Blood Derived Cancer - Bone Marrow,TBM,3,IK6,present,-,present
+TARGET-10-PAPBES-03,03,TARGET-10-PAPBES,Phase_II_Discovery,Dead,3665,B-Precursor,3665,Primary Blood Derived Cancer - Peripheral Blood,TB,2,early_termination,present,-,present
+TARGET-10-PAPBFN-09,09,TARGET-10-PAPBFN,Phase_II_Discovery,Dead,1508,B-Precursor,1508,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,present
+TARGET-10-PAPBSY-09,09,TARGET-10-PAPBSY,Phase_II_Discovery,Dead,665,B-Precursor,665,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PAPBZK-09,09,TARGET-10-PAPBZK,Phase_II_Discovery,Dead,790,B-Precursor,790,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,present
+TARGET-10-PAPCUR-09,09,TARGET-10-PAPCUR,Phase_II_Discovery,Dead,369,B-Precursor,369,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PAPCVZ-04,04,TARGET-10-PAPCVZ,Phase_II_Discovery,Alive,3248,B-Precursor,,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,2,early_termination,present,-,present
+TARGET-10-PAPDJM-04,04,TARGET-10-PAPDJM,Phase_II_Discovery,Alive,722,B-Precursor,,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,1,early_termination,present,-,present
+TARGET-10-PAPDKJ-09,09,TARGET-10-PAPDKJ,Phase_II_Discovery,Dead,1456,B-Precursor,1456,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PAPDUF-09,09,TARGET-10-PAPDUF,Phase_II_Discovery,Alive,3669,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,present
+TARGET-10-PAPDUV-04,04,TARGET-10-PAPDUV,Phase_II_Validation,Alive,3501,B Cell ALL,,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,3,IK6,present,-,present
+TARGET-10-PAPDUV-04,04,TARGET-10-PAPDUV,Phase_II_Validation,Alive,3501,B Cell ALL,,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,3,IK6,present,-,present
+TARGET-10-PAPDUV-09,09,TARGET-10-PAPDUV,Phase_II_Validation,Alive,3501,B Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,3,IK6,present,-,-
+TARGET-10-PAPDWT-04,04,TARGET-10-PAPDWT,Phase_II_Discovery,Alive,3470,B-Precursor,,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,2,early_termination,present,-,present
+TARGET-10-PAPEAB-04,04,TARGET-10-PAPEAB,Phase_II_Discovery,Alive,3353,B-Precursor,,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,1,early_termination,present,-,present
+TARGET-10-PAPECF-04,04,TARGET-10-PAPECF,Phase_II_Discovery,Alive,1290,B-Precursor,,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,6,normal_splicing,present,-,present
+TARGET-10-PAPECF-09,09,TARGET-10-PAPECF,Phase_II_Discovery,Alive,1290,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PAPEFH-04,04,TARGET-10-PAPEFH,Phase_II_Discovery,Dead,852,B-Precursor,852,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,2,early_termination,present,-,present
+TARGET-10-PAPEFH-09,09,TARGET-10-PAPEFH,Phase_II_Discovery,Dead,852,B-Precursor,852,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,present
+TARGET-10-PAPEJN-04,04,TARGET-10-PAPEJN,Phase_II_Validation,Dead,934,B Cell ALL,934,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,6,normal_splicing,present,-,present
+TARGET-10-PAPEJN-09,09,TARGET-10-PAPEJN,Phase_II_Validation,Dead,934,B Cell ALL,934,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,present
+TARGET-10-PAPESW-09,09,TARGET-10-PAPESW,Phase_II_Discovery,Alive,3542,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PAPEWB-09,09,TARGET-10-PAPEWB,Phase_II_Discovery,Alive,3430,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,present
+TARGET-10-PAPFWH-09,09,TARGET-10-PAPFWH,Phase_II_Discovery,Dead,819,B-Precursor,819,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,present
+TARGET-10-PAPFXN-09,09,TARGET-10-PAPFXN,Phase_II_Discovery,Alive,1160,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,present
+TARGET-10-PAPGFP-04,04,TARGET-10-PAPGFP,Phase_II_Discovery,Dead,945,B-Precursor,945,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,2,early_termination,present,-,present
+TARGET-10-PAPGFP-09,09,TARGET-10-PAPGFP,Phase_II_Discovery,Dead,945,B-Precursor,945,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,present
+TARGET-10-PAPGGT-03,03,TARGET-10-PAPGGT,Phase_II_Discovery,Alive,2507,B-Precursor,,Primary Blood Derived Cancer - Peripheral Blood,TB,2,early_termination,present,-,present
+TARGET-10-PAPGNC-03,03,TARGET-10-PAPGNC,Phase_II_Discovery,Dead,1914,B-Precursor,1914,Primary Blood Derived Cancer - Peripheral Blood,TB,2,early_termination,present,-,present
+TARGET-10-PAPGYC-09,09,TARGET-10-PAPGYC,Phase_II_Discovery,Dead,2003,B-Precursor,2003,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,present
+TARGET-10-PAPHEK-03,03,TARGET-10-PAPHEK,Phase_II_Discovery,Dead,647,B-Precursor,647,Primary Blood Derived Cancer - Peripheral Blood,TB,2,early_termination,present,-,present
+TARGET-10-PAPHGD-09,09,TARGET-10-PAPHGD,Phase_II_Discovery,Alive,3579,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,present
+TARGET-10-PAPHJF-04,04,TARGET-10-PAPHJF,Phase_II_Validation,Dead,483,B Cell ALL,483,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,5,normal_splicing,present,-,present
+TARGET-10-PAPHJF-09,09,TARGET-10-PAPHJF,Phase_II_Validation,Dead,483,B Cell ALL,483,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,present
+TARGET-10-PAPHMH-09,09,TARGET-10-PAPHMH,Phase_II_Discovery,Dead,397,B-Precursor,397,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,-
+TARGET-10-PAPHPX-03,03,TARGET-10-PAPHPX,Dicentric,Alive,3632,B-Precursor,,Primary Blood Derived Cancer - Peripheral Blood,TB,3,IK6,present,present,present
+TARGET-10-PAPHYN-09,09,TARGET-10-PAPHYN,Dicentric,Unknown,3012,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,3,IK6,present,present,present
+TARGET-10-PAPHZT-09,09,TARGET-10-PAPHZT,Phase_II_Discovery,Alive,3393,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,-
+TARGET-10-PAPHZT-09,09,TARGET-10-PAPHZT,Phase_II_Discovery,Alive,3393,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PAPIGX-09,09,TARGET-10-PAPIGX,Phase_II_Discovery,Alive,644,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,present
+TARGET-10-PAPIJB-04,04,TARGET-10-PAPIJB,Phase_II_Discovery,Alive,3715,B-Precursor,,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,1,early_termination,present,-,-
+TARGET-10-PAPIJM-09,09,TARGET-10-PAPIJM,Phase_II_Discovery,Alive,1203,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,present
+TARGET-10-PAPIJM-09,09,TARGET-10-PAPIJM,Phase_II_Discovery,Alive,1203,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,present
+TARGET-10-PAPIRZ-09,09,TARGET-10-PAPIRZ,Phase_II_Discovery,Dead,1008,B-Precursor,1008,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,-
+TARGET-10-PAPISG-04,04,TARGET-10-PAPISG,Phase_II_Discovery,Alive,3491,B-Precursor,,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,1,early_termination,present,-,present
+TARGET-10-PAPIYG-03,03,TARGET-10-PAPIYG,Dicentric,Alive,3488,B-Precursor,,Primary Blood Derived Cancer - Peripheral Blood,TB,6,normal_splicing,present,present,present
+TARGET-10-PAPJHB-04,04,TARGET-10-PAPJHB,Phase_II_Discovery,Alive,1870,B-Precursor,,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,6,normal_splicing,present,-,present
+TARGET-10-PAPJHB-09,09,TARGET-10-PAPJHB,Phase_II_Discovery,Alive,1870,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PAPJHR-09,09,TARGET-10-PAPJHR,Phase_II_Discovery,Dead,1186,B-Precursor,1186,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PAPJIB-04,04,TARGET-10-PAPJIB,Phase_II_Discovery,Dead,1344,B-Precursor,1344,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,4,normal_splicing,present,-,present
+TARGET-10-PAPJIB-09,09,TARGET-10-PAPJIB,Phase_II_Discovery,Dead,1344,B-Precursor,1344,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,present
+TARGET-10-PAPJXI-04,04,TARGET-10-PAPJXI,Phase_II_Discovery,Alive,3229,B-Precursor,,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,6,normal_splicing,present,-,present
+TARGET-10-PAPJXI-09,09,TARGET-10-PAPJXI,Phase_II_Discovery,Alive,3229,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PAPKNC-09,09,TARGET-10-PAPKNC,Phase_II_Discovery,Dead,1413,B-Precursor,1413,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PAPKNJ-09,09,TARGET-10-PAPKNJ,Dicentric,Alive,3476,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-10-PAPLDL-03,03,TARGET-10-PAPLDL,Phase_II_Discovery,Dead,1187,B-Precursor,1187,Primary Blood Derived Cancer - Peripheral Blood,TB,1,early_termination,present,-,present
+TARGET-10-PAPLDL-04,04,TARGET-10-PAPLDL,Phase_II_Discovery,Dead,1187,B-Precursor,1187,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,6,normal_splicing,present,-,present
+TARGET-10-PAPLDM-04,04,TARGET-10-PAPLDM,Phase_II_Discovery,Alive,3280,B-Precursor,,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,2,early_termination,present,-,present
+TARGET-10-PAPLTZ-04,04,TARGET-10-PAPLTZ,Phase_II_Discovery,Dead,2585,B-Precursor,2585,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,5,normal_splicing,present,-,present
+TARGET-10-PAPLTZ-09,09,TARGET-10-PAPLTZ,Phase_II_Discovery,Dead,2585,B-Precursor,2585,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,present
+TARGET-10-PAPLUG-09,09,TARGET-10-PAPLUG,Phase_II_Discovery,Dead,1155,B-Precursor,1155,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,present
+TARGET-10-PAPMFI-04,04,TARGET-10-PAPMFI,Phase_II_Discovery,Dead,2585,B-Precursor,2585,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,2,early_termination,present,-,-
+TARGET-10-PAPMVB-04,04,TARGET-10-PAPMVB,Phase_II_Discovery,Dead,1413,B-Precursor,1413,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,2,early_termination,present,-,present
+TARGET-10-PAPMVB-09,09,TARGET-10-PAPMVB,Phase_II_Discovery,Dead,1413,B-Precursor,1413,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,present
+TARGET-10-PAPMYD-03,03,TARGET-10-PAPMYD,Phase_II_Discovery,Dead,692,B-Precursor,692,Primary Blood Derived Cancer - Peripheral Blood,TB,1,early_termination,present,-,present
+TARGET-10-PAPNFY-03,03,TARGET-10-PAPNFY,Phase_II_Discovery,Dead,1217,B-Precursor,1217,Primary Blood Derived Cancer - Peripheral Blood,TB,2,early_termination,present,-,present
+TARGET-10-PAPNFY-04,04,TARGET-10-PAPNFY,Phase_II_Discovery,Dead,1217,B-Precursor,1217,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,1,early_termination,present,-,-
+TARGET-10-PAPNMY-04,04,TARGET-10-PAPNMY,Phase_II_Discovery,Dead,1967,B-Precursor,1967,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,2,early_termination,present,-,present
+TARGET-10-PAPNMY-09,09,TARGET-10-PAPNMY,Phase_II_Discovery,Dead,1967,B-Precursor,1967,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,present
+TARGET-10-PAPNNX-04,04,TARGET-10-PAPNNX,Phase_II_Discovery,Dead,846,B-Precursor,846,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,6,normal_splicing,present,-,present
+TARGET-10-PAPNNX-09,09,TARGET-10-PAPNNX,Phase_II_Discovery,Dead,846,B-Precursor,846,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,present
+TARGET-10-PAPNNX-09,09,TARGET-10-PAPNNX,Phase_II_Discovery,Dead,846,B-Precursor,846,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,present
+TARGET-10-PAPPGN-04,04,TARGET-10-PAPPGN,Phase_II_Discovery,Alive,2256,B-Precursor,,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,2,early_termination,present,-,present
+TARGET-10-PAPRCS-04,04,TARGET-10-PAPRCS,Phase_II_Discovery,Dead,460,B-Precursor,460,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,2,early_termination,present,-,present
+TARGET-10-PAPRCS-09,09,TARGET-10-PAPRCS,Phase_II_Discovery,Dead,460,B-Precursor,460,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PAPRFE-09,09,TARGET-10-PAPRFE,Phase_II_Discovery,Dead,391,B-Precursor,391,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,present
+TARGET-10-PAPRMM-09,09,TARGET-10-PAPRMM,Dicentric,Dead,117,B-Precursor,117,Primary Blood Derived Cancer - Bone Marrow,TBM,3,IK6,present,present,present
+TARGET-10-PAPSPG-04,04,TARGET-10-PAPSPG,Phase_II_Discovery,Dead,1533,B-Precursor,1533,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,2,early_termination,present,-,present
+TARGET-10-PAPSPG-04,04,TARGET-10-PAPSPG,Phase_II_Discovery,Dead,1533,B-Precursor,1533,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,3,IK6,present,-,present
+TARGET-10-PAPSPN-04,04,TARGET-10-PAPSPN,Phase_II_Discovery,Dead,733,B-Precursor,733,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,1,early_termination,present,-,present
+TARGET-10-PAPSPN-09,09,TARGET-10-PAPSPN,Phase_II_Discovery,Dead,733,B-Precursor,733,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,present
+TARGET-10-PAPTAT-09,09,TARGET-10-PAPTAT,Dicentric,Alive,3262,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-10-PAPTLM-09,09,TARGET-10-PAPTLM,Phase_II_Discovery,Dead,919,B-Precursor,919,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PAPVTA-04,04,TARGET-10-PAPVTA,Phase_II_Discovery,Alive,3217,B-Precursor,,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,6,normal_splicing,present,-,present
+TARGET-10-PAPVTA-09,09,TARGET-10-PAPVTA,Phase_II_Discovery,Alive,3217,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PAPVTA-09,09,TARGET-10-PAPVTA,Phase_II_Discovery,Alive,3217,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,present
+TARGET-10-PAPZNK-04,04,TARGET-10-PAPZNK,Phase_II_Discovery,Dead,883,B-Precursor,883,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,6,normal_splicing,present,-,present
+TARGET-10-PAPZNK-09,09,TARGET-10-PAPZNK,Phase_II_Discovery,Dead,883,B-Precursor,883,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PAPZST-04,04,TARGET-10-PAPZST,Phase_II_Discovery,Alive,859,B-Precursor,,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,1,early_termination,present,-,-
+TARGET-10-PAPZST-09,09,TARGET-10-PAPZST,Phase_II_Discovery,Alive,859,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PARACA-09,09,TARGET-10-PARACA,Phase_II_Discovery,Dead,806,B-Precursor,806,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,present
+TARGET-10-PARAKF-04,04,TARGET-10-PARAKF,Phase_II_Discovery,Alive,1942,B-Precursor,,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,2,early_termination,present,-,present
+TARGET-10-PARAKF-09,09,TARGET-10-PARAKF,Phase_II_Discovery,Alive,1942,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PARAPE-09,09,TARGET-10-PARAPE,Dicentric,Alive,2991,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-10-PARARJ-09,09,TARGET-10-PARARJ,Phase_II_Discovery,Dead,455,B-Precursor,455,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,present
+TARGET-10-PARASZ-09,09,TARGET-10-PARASZ,Phase_II_Validation,Alive,3087,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PARAYM-09,09,TARGET-10-PARAYM,Phase_II_Validation,Alive,3399,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PARBGL-09,09,TARGET-10-PARBGL,Dicentric,Alive,3246,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,present,present
+TARGET-10-PARBRK-04,04,TARGET-10-PARBRK,Phase_II_Discovery,Dead,99,B-Precursor,99,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,1,early_termination,present,-,present
+TARGET-10-PARBRK-09,09,TARGET-10-PARBRK,Phase_II_Discovery,Dead,99,B-Precursor,99,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,present
+TARGET-10-PARBVI-04,04,TARGET-10-PARBVI,Phase_II_Discovery,Dead,1172,B-Precursor,1172,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,3,IK6,present,-,present
+TARGET-10-PARBVI-09,09,TARGET-10-PARBVI,Phase_II_Discovery,Dead,1172,B-Precursor,1172,Primary Blood Derived Cancer - Bone Marrow,TBM,3,IK6,present,-,present
+TARGET-10-PARBVI-09,09,TARGET-10-PARBVI,Phase_II_Discovery,Dead,1172,B-Precursor,1172,Primary Blood Derived Cancer - Bone Marrow,TBM,3,IK6,present,-,present
+TARGET-10-PARCHB-03,03,TARGET-10-PARCHB,Phase_II_Discovery,Alive,3047,B-Precursor,,Primary Blood Derived Cancer - Peripheral Blood,TB,6,normal_splicing,present,-,-
+TARGET-10-PARCVM-03,03,TARGET-10-PARCVM,Phase_II_Validation,Alive,2424,T Cell ALL,,Primary Blood Derived Cancer - Peripheral Blood,TB,4,normal_splicing,present,-,-
+TARGET-10-PARDWE-03,03,TARGET-10-PARDWE,Phase_II_Validation,Dead,504,B Cell ALL,504,Primary Blood Derived Cancer - Peripheral Blood,TB,5,normal_splicing,present,-,present
+TARGET-10-PARDWN-09,09,TARGET-10-PARDWN,Dicentric,Alive,3010,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-10-PAREGZ-09,09,TARGET-10-PAREGZ,Phase_II_Validation,Alive,3087,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,3,IK6,present,-,-
+TARGET-10-PARFDL-09,09,TARGET-10-PARFDL,Phase_II_Validation,Alive,3075,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PARFIH-09,09,TARGET-10-PARFIH,Phase_II_Validation,Alive,1099,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PARFLV-04,04,TARGET-10-PARFLV,Phase_II_Discovery,Dead,334,B-Precursor,334,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,2,early_termination,present,-,-
+TARGET-10-PARFLV-09,09,TARGET-10-PARFLV,Phase_II_Discovery,Dead,334,B-Precursor,334,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PARFPJ-09,09,TARGET-10-PARFPJ,Phase_II_Validation,Alive,2946,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PARFTR-04,04,TARGET-10-PARFTR,Phase_II_Discovery,Dead,465,B-Precursor,465,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,6,normal_splicing,present,-,present
+TARGET-10-PARFTR-09,09,TARGET-10-PARFTR,Phase_II_Discovery,Dead,465,B-Precursor,465,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,present
+TARGET-10-PARFWD-03,03,TARGET-10-PARFWD,Dicentric,Alive,3191,B-Precursor,,Primary Blood Derived Cancer - Peripheral Blood,TB,6,normal_splicing,present,present,present
+TARGET-10-PARFXJ-09,09,TARGET-10-PARFXJ,Phase_II_Validation,Alive,2988,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PARGFL-09,09,TARGET-10-PARGFL,Phase_II_Validation,Dead,1893,T Cell ALL,1893,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PARGFV-04,04,TARGET-10-PARGFV,Phase_II_Discovery,Alive,3311,B-Precursor,,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,1,early_termination,present,-,present
+TARGET-10-PARGHW-04,04,TARGET-10-PARGHW,Phase_II_Discovery,Alive,1467,B-Precursor,,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,2,early_termination,present,-,-
+TARGET-10-PARGML-03,03,TARGET-10-PARGML,Phase_II_Discovery,Dead,187,B-Precursor,187,Primary Blood Derived Cancer - Peripheral Blood,TB,1,early_termination,present,-,-
+TARGET-10-PARGVZ-04,04,TARGET-10-PARGVZ,Phase_II_Discovery,Alive,3152,B-Precursor,,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,5,normal_splicing,present,-,present
+TARGET-10-PARHBI-09,09,TARGET-10-PARHBI,Phase_II_Validation,Alive,3010,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PARHBT-09,09,TARGET-10-PARHBT,Phase_II_Validation,Alive,2956,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PARHES-09,09,TARGET-10-PARHES,Phase_II_Validation,Alive,2940,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PARIAD-03,03,TARGET-10-PARIAD,Phase_II_Discovery,Dead,510,B-Precursor,510,Primary Blood Derived Cancer - Peripheral Blood,TB,1,early_termination,present,-,present
+TARGET-10-PARIAD-04,04,TARGET-10-PARIAD,Phase_II_Discovery,Dead,510,B-Precursor,510,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,1,early_termination,present,-,present
+TARGET-10-PARIYD-09,09,TARGET-10-PARIYD,Phase_II_Validation,Alive,3108,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PARIZN-09,09,TARGET-10-PARIZN,Phase_II_Validation,Dead,673,T Cell ALL,673,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PARJAY-09,09,TARGET-10-PARJAY,Phase_II_Validation,Alive,2889,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PARJLA-09,09,TARGET-10-PARJLA,Dicentric,Alive,2912,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-10-PARJNX-09,09,TARGET-10-PARJNX,Phase_II_Validation,Alive,3006,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PARJPL-09,09,TARGET-10-PARJPL,Phase_II_Validation,Alive,3158,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PARJSR-04,04,TARGET-10-PARJSR,Phase_II_Discovery,Dead,853,B-Precursor,853,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,5,normal_splicing,present,-,present
+TARGET-10-PARJSR-09,09,TARGET-10-PARJSR,Phase_II_Discovery,Dead,853,B-Precursor,853,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,present
+TARGET-10-PARJXW-09,09,TARGET-10-PARJXW,Phase_II_Validation,Alive,35,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PARJZZ-04,04,TARGET-10-PARJZZ,Phase_II_Discovery,Dead,993,B-Precursor,993,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,2,early_termination,present,-,present
+TARGET-10-PARJZZ-09,09,TARGET-10-PARJZZ,Phase_II_Discovery,Dead,993,B-Precursor,993,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,present
+TARGET-10-PARKLK-09,09,TARGET-10-PARKLK,Phase_II_Validation,Alive,29,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PARLAF-04,04,TARGET-10-PARLAF,Phase_II_Discovery,Alive,2939,B-Precursor,,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,2,early_termination,present,-,present
+TARGET-10-PARLAF-09,09,TARGET-10-PARLAF,Phase_II_Discovery,Alive,2939,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,-
+TARGET-10-PARLEK-03,03,TARGET-10-PARLEK,Phase_II_Discovery,Alive,2900,B-Precursor,,Primary Blood Derived Cancer - Peripheral Blood,TB,1,early_termination,present,-,present
+TARGET-10-PARLJA-09,09,TARGET-10-PARLJA,Phase_II_Validation,Alive,2932,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PARLST-09,09,TARGET-10-PARLST,Phase_II_Validation,Alive,3058,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PARMFF-09,09,TARGET-10-PARMFF,Phase_II_Validation,Alive,3189,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PARMIH-09,09,TARGET-10-PARMIH,Phase_II_Validation,Dead,2953,T Cell ALL,2953,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PARMKK-09,09,TARGET-10-PARMKK,Phase_II_Validation,Alive,3003,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PARMKM-03,03,TARGET-10-PARMKM,Phase_II_Validation,Alive,2995,T Cell ALL,,Primary Blood Derived Cancer - Peripheral Blood,TB,5,normal_splicing,present,-,-
+TARGET-10-PARMMV-09,09,TARGET-10-PARMMV,Phase_II_Validation,Alive,3052,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PARMRF-09,09,TARGET-10-PARMRF,Phase_II_Validation,Alive,2989,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PARMSP-04,04,TARGET-10-PARMSP,Phase_II_Validation,Dead,584,B Cell ALL,584,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,2,early_termination,present,-,present
+TARGET-10-PARMSP-09,09,TARGET-10-PARMSP,Phase_II_Validation,Dead,584,B Cell ALL,584,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PARMUC-03,03,TARGET-10-PARMUC,Phase_II_Validation,Alive,2995,T Cell ALL,,Primary Blood Derived Cancer - Peripheral Blood,TB,1,early_termination,present,-,-
+TARGET-10-PARMWH-09,09,TARGET-10-PARMWH,Phase_II_Validation,Alive,3089,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PARMXF-03,03,TARGET-10-PARMXF,Phase_II_Discovery,Dead,951,B-Precursor,951,Primary Blood Derived Cancer - Peripheral Blood,TB,6,normal_splicing,present,-,present
+TARGET-10-PARMXF-04,04,TARGET-10-PARMXF,Phase_II_Discovery,Dead,951,B-Precursor,951,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,1,early_termination,present,-,present
+TARGET-10-PARNBN-09,09,TARGET-10-PARNBN,Phase_II_Validation,Alive,1687,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PARNEH-09,09,TARGET-10-PARNEH,Phase_II_Validation,Dead,524,T Cell ALL,524,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PARNJB-09,09,TARGET-10-PARNJB,Phase_II_Validation,Alive,3148,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PARNMF-03,03,TARGET-10-PARNMF,Phase_II_Discovery,Alive,3157,B-Precursor,,Primary Blood Derived Cancer - Peripheral Blood,TB,1,early_termination,present,-,present
+TARGET-10-PARNMF-04,04,TARGET-10-PARNMF,Phase_II_Discovery,Alive,3157,B-Precursor,,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,1,early_termination,present,-,present
+TARGET-10-PARNMV-09,09,TARGET-10-PARNMV,Phase_II_Validation,Alive,2905,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PARNSH-03,03,TARGET-10-PARNSH,Phase_II_Discovery,Dead,2029,B-Precursor,2029,Primary Blood Derived Cancer - Peripheral Blood,TB,2,early_termination,present,-,present
+TARGET-10-PARNSP-09,09,TARGET-10-PARNSP,Phase_II_Validation,Alive,3086,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PARNXJ-09,09,TARGET-10-PARNXJ,Phase_II_Validation,Alive,2840,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PARPET-09,09,TARGET-10-PARPET,Phase_II_Validation,Alive,1939,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PARPHB-09,09,TARGET-10-PARPHB,Phase_II_Validation,Alive,2960,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PARPNM-09,09,TARGET-10-PARPNM,Phase_II_Discovery,Dead,233,B-Precursor,233,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,present
+TARGET-10-PARPRW-04,04,TARGET-10-PARPRW,Phase_II_Discovery,Dead,442,B-Precursor,442,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,1,early_termination,present,-,present
+TARGET-10-PARPRW-09,09,TARGET-10-PARPRW,Phase_II_Discovery,Dead,442,B-Precursor,442,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PARPUL-09,09,TARGET-10-PARPUL,Phase_II_Validation,Alive,2825,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PARPYJ-09,09,TARGET-10-PARPYJ,Phase_II_Validation,Alive,2759,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PARPZJ-03,03,TARGET-10-PARPZJ,Phase_II_Discovery,Alive,2419,B-Precursor,,Primary Blood Derived Cancer - Peripheral Blood,TB,1,early_termination,present,-,present
+TARGET-10-PARRKK-09,09,TARGET-10-PARRKK,Phase_II_Validation,Alive,2752,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PARSET-09,09,TARGET-10-PARSET,Phase_II_Validation,Alive,356,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PARSGC-03,03,TARGET-10-PARSGC,Phase_II_Discovery,Alive,2829,B-Precursor,,Primary Blood Derived Cancer - Peripheral Blood,TB,2,early_termination,present,-,present
+TARGET-10-PARSJG-09,09,TARGET-10-PARSJG,Phase_II_Validation,Alive,2737,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PARSLL-09,09,TARGET-10-PARSLL,Dicentric,Alive,2531,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,3,IK6,present,present,present
+TARGET-10-PARSNX-09,09,TARGET-10-PARSNX,Phase_II_Validation,Alive,2077,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PARSZH-09,09,TARGET-10-PARSZH,Phase_II_Discovery,Alive,2400,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,present
+TARGET-10-PARTBP-09,09,TARGET-10-PARTBP,Phase_II_Validation,Alive,3083,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PARTJL-09,09,TARGET-10-PARTJL,Phase_II_Discovery,Alive,968,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,-
+TARGET-10-PARTKL-09,09,TARGET-10-PARTKL,Phase_II_Discovery,Dead,900,B-Precursor,900,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,-
+TARGET-10-PARTLY-09,09,TARGET-10-PARTLY,Phase_II_Validation,Alive,3058,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PARTPW-09,09,TARGET-10-PARTPW,Phase_II_Validation,Alive,2750,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PARUAT-09,09,TARGET-10-PARUAT,Dicentric,Alive,2964,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-10-PARUBK-03,03,TARGET-10-PARUBK,Phase_II_Discovery,Dead,560,B-Precursor,560,Primary Blood Derived Cancer - Peripheral Blood,TB,5,normal_splicing,present,-,present
+TARGET-10-PARUEU-09,09,TARGET-10-PARUEU,Phase_II_Validation,Alive,2247,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PARUFL-09,09,TARGET-10-PARUFL,Dicentric,Alive,2859,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,3,IK6,present,present,present
+TARGET-10-PARUGP-09,09,TARGET-10-PARUGP,Phase_II_Discovery,Dead,289,B-Precursor,289,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,present
+TARGET-10-PARUKW-09,09,TARGET-10-PARUKW,Phase_II_Validation,Alive,2701,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,-
+TARGET-10-PARUNW-09,09,TARGET-10-PARUNW,Dicentric,Alive,2790,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,present,present
+TARGET-10-PARUYU-03,03,TARGET-10-PARUYU,Dicentric,Alive,2477,B-Precursor,,Primary Blood Derived Cancer - Peripheral Blood,TB,6,normal_splicing,present,present,present
+TARGET-10-PARVEI-09,09,TARGET-10-PARVEI,Phase_II_Validation,Alive,2769,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PARVHY-09,09,TARGET-10-PARVHY,Phase_II_Validation,Alive,2948,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PARVMR-09,09,TARGET-10-PARVMR,Phase_II_Validation,Alive,2841,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PARVWD-09,09,TARGET-10-PARVWD,Phase_II_Discovery,Dead,255,B-Precursor,255,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,present
+TARGET-10-PARWDM-09,09,TARGET-10-PARWDM,Phase_II_Validation,Alive,821,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PARWID-09,09,TARGET-10-PARWID,Phase_II_Validation,Alive,2648,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PARWLP-09,09,TARGET-10-PARWLP,Phase_II_Validation,Alive,2884,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PARWMF-09,09,TARGET-10-PARWMF,Phase_II_Validation,Alive,2668,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PARWNW-09,09,TARGET-10-PARWNW,Phase_II_Validation,Alive,2324,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PARWRJ-09,09,TARGET-10-PARWRJ,Dicentric,Alive,2915,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-10-PARWVN-03,03,TARGET-10-PARWVN,Phase_II_Discovery,Alive,2817,B-Precursor,,Primary Blood Derived Cancer - Peripheral Blood,TB,2,early_termination,present,-,present
+TARGET-10-PARWXF-03,03,TARGET-10-PARWXF,Dicentric,Unknown,2674,B-Precursor,,Primary Blood Derived Cancer - Peripheral Blood,TB,6,normal_splicing,present,present,present
+TARGET-10-PARXCD-09,09,TARGET-10-PARXCD,Dicentric,Alive,1326,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-10-PARXHT-03,03,TARGET-10-PARXHT,Phase_II_Validation,Alive,2652,T Cell ALL,,Primary Blood Derived Cancer - Peripheral Blood,TB,4,normal_splicing,present,-,-
+TARGET-10-PARXLS-09,09,TARGET-10-PARXLS,Phase_II_Validation,Alive,2756,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PARXMC-04,04,TARGET-10-PARXMC,Phase_II_Discovery,Alive,2818,B-Precursor,,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,1,early_termination,present,-,-
+TARGET-10-PARXMC-09,09,TARGET-10-PARXMC,Phase_II_Discovery,Alive,2818,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,present
+TARGET-10-PARXMV-03,03,TARGET-10-PARXMV,Phase_II_Validation,Alive,2441,T Cell ALL,,Primary Blood Derived Cancer - Peripheral Blood,TB,5,normal_splicing,present,-,-
+TARGET-10-PARXVS-09,09,TARGET-10-PARXVS,Phase_II_Validation,Dead,2291,T Cell ALL,2291,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PARYAJ-09,09,TARGET-10-PARYAJ,Dicentric,Dead,2697,B-Precursor,2697,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-10-PARYGI-03,03,TARGET-10-PARYGI,Phase_II_Validation,Alive,2755,T Cell ALL,,Primary Blood Derived Cancer - Peripheral Blood,TB,5,normal_splicing,present,-,-
+TARGET-10-PARZYX-09,09,TARGET-10-PARZYX,Dicentric,Alive,2766,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-10-PASCIU-03,03,TARGET-10-PASCIU,Phase_II_Discovery,Dead,977,B-Precursor,977,Primary Blood Derived Cancer - Peripheral Blood,TB,1,early_termination,present,-,present
+TARGET-10-PASCIU-03,03,TARGET-10-PASCIU,Phase_II_Discovery,Dead,977,B-Precursor,977,Primary Blood Derived Cancer - Peripheral Blood,TB,6,normal_splicing,present,-,present
+TARGET-10-PASDYK-03,03,TARGET-10-PASDYK,Phase_II_Discovery,Dead,736,B-Precursor,736,Primary Blood Derived Cancer - Peripheral Blood,TB,2,early_termination,present,-,-
+TARGET-10-PASDYM-09,09,TARGET-10-PASDYM,Dicentric,Alive,2653,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-10-PASEVJ-09,09,TARGET-10-PASEVJ,Phase_II_Discovery,Dead,892,B-Precursor,892,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,-
+TARGET-10-PASFHR-09,09,TARGET-10-PASFHR,Phase_II_Validation,Alive,2633,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASFKA-09,09,TARGET-10-PASFKA,Phase_II_Validation,Alive,2609,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASFLK-09,09,TARGET-10-PASFLK,Phase_II_Validation,Alive,2675,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASFXA-03,03,TARGET-10-PASFXA,Phase_II_Discovery,Dead,645,B-Precursor,645,Primary Blood Derived Cancer - Peripheral Blood,TB,2,early_termination,present,-,present
+TARGET-10-PASFXA-04,04,TARGET-10-PASFXA,Phase_II_Discovery,Dead,645,B-Precursor,645,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,6,normal_splicing,present,-,present
+TARGET-10-PASFXA-04,04,TARGET-10-PASFXA,Phase_II_Discovery,Dead,645,B-Precursor,645,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,5,normal_splicing,present,-,present
+TARGET-10-PASGFH-09,09,TARGET-10-PASGFH,Phase_II_Validation,Alive,1206,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PASHDV-09,09,TARGET-10-PASHDV,Phase_II_Validation,Alive,2671,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASHNK-09,09,TARGET-10-PASHNK,Phase_II_Validation,Alive,2578,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASHUI-04,04,TARGET-10-PASHUI,Phase_II_Discovery,Dead,605,B-Precursor,605,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,6,normal_splicing,present,-,present
+TARGET-10-PASHUI-09,09,TARGET-10-PASHUI,Phase_II_Discovery,Dead,605,B-Precursor,605,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,present
+TARGET-10-PASHUP-09,09,TARGET-10-PASHUP,Phase_II_Validation,Alive,2443,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASHXL-09,09,TARGET-10-PASHXL,Phase_II_Validation,Alive,2491,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASIGB-03,03,TARGET-10-PASIGB,Dicentric,Alive,2354,B-Precursor,,Primary Blood Derived Cancer - Peripheral Blood,TB,5,normal_splicing,present,present,present
+TARGET-10-PASIIY-09,09,TARGET-10-PASIIY,Phase_II_Validation,Alive,1370,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASILP-09,09,TARGET-10-PASILP,Dicentric,Dead,1059,B-Precursor,1059,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,present,present
+TARGET-10-PASILW-09,09,TARGET-10-PASILW,Phase_II_Validation,Dead,1664,T Cell ALL,1664,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASINX-09,09,TARGET-10-PASINX,Phase_II_Validation,Alive,2516,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASIZE-09,09,TARGET-10-PASIZE,Dicentric,Unknown,1699,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-10-PASJJR-09,09,TARGET-10-PASJJR,Phase_II_Validation,Alive,2503,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PASJLN-09,09,TARGET-10-PASJLN,Phase_II_Validation,Alive,2662,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASJMK-09,09,TARGET-10-PASJMK,Phase_II_Validation,Alive,2646,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASJYI-09,09,TARGET-10-PASJYI,Phase_II_Validation,Alive,2439,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASKAD-09,09,TARGET-10-PASKAD,Phase_II_Validation,Alive,2536,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASKAY-04,04,TARGET-10-PASKAY,Phase_II_Discovery,Dead,487,B-Precursor,487,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,6,normal_splicing,present,-,present
+TARGET-10-PASKAY-09,09,TARGET-10-PASKAY,Phase_II_Discovery,Dead,487,B-Precursor,487,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PASKCL-09,09,TARGET-10-PASKCL,Phase_II_Validation,Alive,2539,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PASKGG-09,09,TARGET-10-PASKGG,Phase_II_Validation,Alive,33,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PASKHT-03,03,TARGET-10-PASKHT,Phase_II_Discovery,Dead,716,B-Precursor,716,Primary Blood Derived Cancer - Peripheral Blood,TB,1,early_termination,present,-,present
+TARGET-10-PASKIC-09,09,TARGET-10-PASKIC,Phase_II_Validation,Alive,2710,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PASKRN-03,03,TARGET-10-PASKRN,Phase_II_Validation,Alive,2480,T Cell ALL,,Primary Blood Derived Cancer - Peripheral Blood,TB,6,normal_splicing,present,-,-
+TARGET-10-PASKSY-09,09,TARGET-10-PASKSY,Phase_II_Validation,Alive,2367,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASKTG-09,09,TARGET-10-PASKTG,Phase_II_Validation,Alive,2128,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PASKXN-09,09,TARGET-10-PASKXN,Phase_II_Validation,Alive,579,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PASLAB-09,09,TARGET-10-PASLAB,Phase_II_Validation,Alive,2517,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PASLBB-09,09,TARGET-10-PASLBB,Phase_II_Validation,Alive,2478,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASLCJ-03,03,TARGET-10-PASLCJ,Dicentric,Alive,2303,B-Precursor,,Primary Blood Derived Cancer - Peripheral Blood,TB,6,normal_splicing,present,present,present
+TARGET-10-PASLMB-03,03,TARGET-10-PASLMB,Dicentric,Alive,2485,B-Precursor,,Primary Blood Derived Cancer - Peripheral Blood,TB,3,IK6,present,present,present
+TARGET-10-PASLZM-40,40,TARGET-10-PASLZM,Phase_II_Discovery,Dead,407,B-Precursor,407,Recurrent Blood Derived Cancer - Peripheral Blood,TRB,2,early_termination,present,-,present
+TARGET-10-PASMGZ-09,09,TARGET-10-PASMGZ,Dicentric,Alive,2403,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,present,present
+TARGET-10-PASMHF-09,09,TARGET-10-PASMHF,Phase_II_Validation,Alive,2531,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASMIC-09,09,TARGET-10-PASMIC,Phase_II_Validation,Alive,2500,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASMNV-09,09,TARGET-10-PASMNV,Phase_II_Validation,Alive,2495,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PASNEH-09,09,TARGET-10-PASNEH,Phase_II_Validation,Alive,2579,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASNJI-09,09,TARGET-10-PASNJI,Dicentric,Alive,2225,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,present,present
+TARGET-10-PASNTZ-09,09,TARGET-10-PASNTZ,Phase_II_Validation,Alive,2486,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASPBU-09,09,TARGET-10-PASPBU,Phase_II_Validation,Alive,2347,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,-
+TARGET-10-PASPDS-09,09,TARGET-10-PASPDS,Phase_II_Validation,Alive,2626,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASPPN-09,09,TARGET-10-PASPPN,Phase_II_Validation,Dead,252,T Cell ALL,252,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASRCV-09,09,TARGET-10-PASRCV,Phase_II_Validation,Alive,2451,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASREU-09,09,TARGET-10-PASREU,Dicentric,Alive,2402,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-10-PASRMM-09,09,TARGET-10-PASRMM,Phase_II_Validation,Alive,2485,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASRSV-03,03,TARGET-10-PASRSV,Dicentric,Unknown,1362,B-Precursor,,Primary Blood Derived Cancer - Peripheral Blood,TB,6,normal_splicing,present,present,present
+TARGET-10-PASRWZ-03,03,TARGET-10-PASRWZ,Dicentric,Alive,2448,B-Precursor,,Primary Blood Derived Cancer - Peripheral Blood,TB,6,normal_splicing,present,present,present
+TARGET-10-PASRYW-03,03,TARGET-10-PASRYW,Dicentric,Alive,2391,B-Precursor,,Primary Blood Derived Cancer - Peripheral Blood,TB,6,normal_splicing,present,present,present
+TARGET-10-PASSEF-09,09,TARGET-10-PASSEF,Phase_II_Validation,Alive,2487,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASSHC-09,09,TARGET-10-PASSHC,Phase_II_Validation,Alive,2483,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PASSPP-09,09,TARGET-10-PASSPP,Phase_II_Validation,Alive,2386,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASSRP-09,09,TARGET-10-PASSRP,Phase_II_Validation,Alive,1231,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PASSSR-09,09,TARGET-10-PASSSR,Phase_II_Validation,Alive,2463,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PASSXJ-03,03,TARGET-10-PASSXJ,Phase_II_Discovery,Dead,552,B-Precursor,552,Primary Blood Derived Cancer - Peripheral Blood,TB,2,early_termination,present,-,present
+TARGET-10-PASSZA-09,09,TARGET-10-PASSZA,Phase_II_Validation,Alive,2496,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASTDU-09,09,TARGET-10-PASTDU,Phase_II_Validation,Alive,2507,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,3,IK6,present,-,-
+TARGET-10-PASTHE-09,09,TARGET-10-PASTHE,Phase_II_Validation,Alive,2543,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PASTLM-03,03,TARGET-10-PASTLM,Dicentric,Alive,2128,B-Precursor,,Primary Blood Derived Cancer - Peripheral Blood,TB,6,normal_splicing,present,present,present
+TARGET-10-PASTLP-09,09,TARGET-10-PASTLP,Phase_II_Validation,Alive,2240,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PASTPT-09,09,TARGET-10-PASTPT,Phase_II_Validation,Alive,2490,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PASTSR-09,09,TARGET-10-PASTSR,Dicentric,Alive,2482,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-10-PASTXU-09,09,TARGET-10-PASTXU,Phase_II_Validation,Alive,2002,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASTYT-09,09,TARGET-10-PASTYT,Dicentric,Alive,2433,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-10-PASUBW-09,09,TARGET-10-PASUBW,Phase_II_Discovery,Dead,474,B-Precursor,474,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,present
+TARGET-10-PASUGC-09,09,TARGET-10-PASUGC,Phase_II_Validation,Alive,2411,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASUIN-09,09,TARGET-10-PASUIN,Phase_II_Validation,Alive,2564,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASUSV-09,09,TARGET-10-PASUSV,Phase_II_Validation,Alive,2552,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASUWG-03,03,TARGET-10-PASUWG,Dicentric,Alive,2357,B-Precursor,,Primary Blood Derived Cancer - Peripheral Blood,TB,6,normal_splicing,present,present,present
+TARGET-10-PASVIN-09,09,TARGET-10-PASVIN,Phase_II_Validation,Alive,2428,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASVPZ-09,09,TARGET-10-PASVPZ,Phase_II_Validation,Alive,2432,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PASWFN-09,09,TARGET-10-PASWFN,Phase_II_Validation,Alive,2395,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PASWNU-09,09,TARGET-10-PASWNU,Phase_II_Validation,Alive,2070,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PASWSR-09,09,TARGET-10-PASWSR,Phase_II_Validation,Alive,2316,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PASWXB-09,09,TARGET-10-PASWXB,Phase_II_Validation,Alive,2288,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PASWXZ-09,09,TARGET-10-PASWXZ,Phase_II_Validation,Alive,2440,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PASWZJ-09,09,TARGET-10-PASWZJ,Phase_II_Validation,Alive,2403,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PASXFY-09,09,TARGET-10-PASXFY,Dicentric,Alive,2176,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-10-PASXIL-09,09,TARGET-10-PASXIL,Phase_II_Validation,Alive,2493,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASXLT-09,09,TARGET-10-PASXLT,Phase_II_Validation,Alive,2419,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PASXLZ-09,09,TARGET-10-PASXLZ,Phase_II_Validation,Alive,2312,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASXMF-09,09,TARGET-10-PASXMF,Phase_II_Validation,Alive,2359,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASXSI-09,09,TARGET-10-PASXSI,Phase_II_Validation,Alive,2420,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASXUC-09,09,TARGET-10-PASXUC,Phase_II_Validation,Alive,2238,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PASXUU-09,09,TARGET-10-PASXUU,Phase_II_Validation,Alive,2306,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASXZH-09,09,TARGET-10-PASXZH,Dicentric,Alive,2245,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-10-PASYAJ-09,09,TARGET-10-PASYAJ,Phase_II_Validation,Alive,2426,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PASYCN-09,09,TARGET-10-PASYCN,Phase_II_Validation,Alive,2313,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PASYGM-03,03,TARGET-10-PASYGM,Phase_II_Discovery,Dead,429,B-Precursor,429,Primary Blood Derived Cancer - Peripheral Blood,TB,1,early_termination,present,-,-
+TARGET-10-PASYHN-09,09,TARGET-10-PASYHN,Phase_II_Validation,Alive,1023,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,-
+TARGET-10-PASYIS-09,09,TARGET-10-PASYIS,Phase_II_Validation,Alive,2288,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PASYSJ-09,09,TARGET-10-PASYSJ,Phase_II_Validation,Alive,2126,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,-
+TARGET-10-PASYWF-03,03,TARGET-10-PASYWF,Phase_II_Validation,Alive,2321,T Cell ALL,,Primary Blood Derived Cancer - Peripheral Blood,TB,6,normal_splicing,present,-,-
+TARGET-10-PASZEW-09,09,TARGET-10-PASZEW,Phase_II_Validation,Alive,2314,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PASZIY-09,09,TARGET-10-PASZIY,Phase_II_Validation,Alive,2369,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PASZJW-03,03,TARGET-10-PASZJW,Phase_II_Validation,Alive,2325,T Cell ALL,,Primary Blood Derived Cancer - Peripheral Blood,TB,6,normal_splicing,present,-,-
+TARGET-10-PATAAH-09,09,TARGET-10-PATAAH,Dicentric,Alive,2161,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-10-PATALJ-09,09,TARGET-10-PATALJ,Phase_II_Validation,Alive,1902,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATAXS-09,09,TARGET-10-PATAXS,Phase_II_Validation,Alive,2252,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATAYT-09,09,TARGET-10-PATAYT,Phase_II_Validation,Alive,2370,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PATBDJ-09,09,TARGET-10-PATBDJ,Phase_II_Validation,Alive,2344,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,-
+TARGET-10-PATBDK-09,09,TARGET-10-PATBDK,Phase_II_Validation,Alive,2312,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATBGC-09,09,TARGET-10-PATBGC,Phase_II_Validation,Alive,1841,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATBNT-09,09,TARGET-10-PATBNT,Phase_II_Validation,Alive,2156,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PATBRV-09,09,TARGET-10-PATBRV,Phase_II_Validation,Dead,213,T Cell ALL,213,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATBTX-09,09,TARGET-10-PATBTX,Phase_II_Validation,Alive,2185,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PATBYK-09,09,TARGET-10-PATBYK,Phase_II_Validation,Dead,743,T Cell ALL,743,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATCDM-09,09,TARGET-10-PATCDM,Phase_II_Validation,Dead,949,T Cell ALL,949,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PATCDZ-09,09,TARGET-10-PATCDZ,Phase_II_Validation,Alive,,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATCJJ-09,09,TARGET-10-PATCJJ,Dicentric,Alive,2296,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,present,present
+TARGET-10-PATCKV-09,09,TARGET-10-PATCKV,Phase_II_Validation,Alive,2406,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATCNI-09,09,TARGET-10-PATCNI,Phase_II_Validation,Alive,2400,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATCTI-04,04,TARGET-10-PATCTI,Phase_II_Discovery,Dead,482,B-Precursor,482,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,2,early_termination,present,-,present
+TARGET-10-PATCTI-09,09,TARGET-10-PATCTI,Phase_II_Discovery,Dead,482,B-Precursor,482,Primary Blood Derived Cancer - Bone Marrow,TBM,2,early_termination,present,-,present
+TARGET-10-PATCUK-09,09,TARGET-10-PATCUK,Phase_II_Validation,Alive,2244,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATCZN-09,09,TARGET-10-PATCZN,Phase_II_Validation,Alive,2302,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATDBU-09,09,TARGET-10-PATDBU,Phase_II_Validation,Alive,2334,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PATDDZ-09,09,TARGET-10-PATDDZ,Phase_II_Validation,Alive,2183,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PATDFE-09,09,TARGET-10-PATDFE,Phase_II_Validation,Alive,2365,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATDGZ-09,09,TARGET-10-PATDGZ,Phase_II_Validation,Alive,2324,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATDKT-09,09,TARGET-10-PATDKT,Phase_II_Validation,Alive,2305,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATDLG-09,09,TARGET-10-PATDLG,Phase_II_Validation,Alive,2351,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PATDMN-09,09,TARGET-10-PATDMN,Phase_II_Validation,Alive,2323,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATDRC-03,03,TARGET-10-PATDRC,Phase_II_Validation,Alive,1262,T Cell ALL,,Primary Blood Derived Cancer - Peripheral Blood,TB,6,normal_splicing,present,-,-
+TARGET-10-PATEAK-09,09,TARGET-10-PATEAK,Phase_II_Validation,Alive,2340,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATEFF-09,09,TARGET-10-PATEFF,Phase_II_Validation,Alive,2114,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PATEHZ-03,03,TARGET-10-PATEHZ,Phase_II_Validation,Alive,1707,T Cell ALL,,Primary Blood Derived Cancer - Peripheral Blood,TB,4,normal_splicing,present,-,-
+TARGET-10-PATEIT-09,09,TARGET-10-PATEIT,Phase_II_Validation,Dead,605,T Cell ALL,605,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATELK-03,03,TARGET-10-PATELK,Dicentric,Dead,676,B-Precursor,676,Primary Blood Derived Cancer - Peripheral Blood,TB,6,normal_splicing,present,present,present
+TARGET-10-PATEMI-09,09,TARGET-10-PATEMI,Phase_II_Validation,Alive,2172,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PATENL-09,09,TARGET-10-PATENL,Phase_II_Validation,Dead,605,T Cell ALL,605,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATEVE-09,09,TARGET-10-PATEVE,Dicentric,Alive,2150,B-Precursor,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-10-PATEVL-09,09,TARGET-10-PATEVL,Phase_II_Validation,Alive,2339,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PATEYS-09,09,TARGET-10-PATEYS,Phase_II_Validation,Alive,1932,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATFJD-09,09,TARGET-10-PATFJD,Phase_II_Validation,Alive,2295,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PATFJP-09,09,TARGET-10-PATFJP,Phase_II_Validation,Alive,2025,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATFRM-09,09,TARGET-10-PATFRM,Phase_II_Validation,Alive,2203,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATFVG-09,09,TARGET-10-PATFVG,Phase_II_Validation,Alive,2191,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATFWF-09,09,TARGET-10-PATFWF,Phase_II_Validation,Alive,208,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATFYZ-09,09,TARGET-10-PATFYZ,Phase_II_Validation,Alive,2317,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATGBY-09,09,TARGET-10-PATGBY,Phase_II_Validation,Alive,2334,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATGKE-09,09,TARGET-10-PATGKE,Phase_II_Validation,Alive,2006,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATGLV-09,09,TARGET-10-PATGLV,Phase_II_Validation,Alive,2289,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATGMP-09,09,TARGET-10-PATGMP,Phase_II_Validation,Alive,2180,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATGVX-09,09,TARGET-10-PATGVX,Phase_II_Validation,Alive,2305,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PATGWP-09,09,TARGET-10-PATGWP,Phase_II_Validation,Alive,2203,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATGXS-09,09,TARGET-10-PATGXS,Phase_II_Validation,Alive,2136,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PATGYH-09,09,TARGET-10-PATGYH,Phase_II_Validation,Alive,2154,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATGZA-09,09,TARGET-10-PATGZA,Phase_II_Validation,Alive,2184,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATHBG-09,09,TARGET-10-PATHBG,Phase_II_Validation,Alive,2176,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PATHFE-09,09,TARGET-10-PATHFE,Phase_II_Validation,Alive,2178,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATHGY-09,09,TARGET-10-PATHGY,Phase_II_Validation,Alive,2125,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATHJF-09,09,TARGET-10-PATHJF,Phase_II_Validation,Alive,2039,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PATHRF-09,09,TARGET-10-PATHRF,Phase_II_Validation,Alive,2289,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATHWV-09,09,TARGET-10-PATHWV,Phase_II_Validation,Alive,2253,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATIBE-09,09,TARGET-10-PATIBE,Phase_II_Validation,Alive,2124,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PATIKN-03,03,TARGET-10-PATIKN,Phase_II_Validation,Alive,2139,T Cell ALL,,Primary Blood Derived Cancer - Peripheral Blood,TB,5,normal_splicing,present,-,-
+TARGET-10-PATITB-09,09,TARGET-10-PATITB,Phase_II_Validation,Alive,2191,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PATITY-09,09,TARGET-10-PATITY,Phase_II_Validation,Alive,2156,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATJBC-09,09,TARGET-10-PATJBC,Phase_II_Validation,Alive,2203,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,3,IK6,present,-,-
+TARGET-10-PATJLT-09,09,TARGET-10-PATJLT,Phase_II_Validation,Alive,2201,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATJZK-09,09,TARGET-10-PATJZK,Phase_II_Validation,Alive,1335,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PATKGP-09,09,TARGET-10-PATKGP,Phase_II_Validation,Alive,2167,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PATKVD-09,09,TARGET-10-PATKVD,Phase_II_Validation,Alive,2151,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PATKWU-09,09,TARGET-10-PATKWU,Phase_II_Validation,Alive,2083,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PATKYI-09,09,TARGET-10-PATKYI,Phase_II_Validation,Alive,2009,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATLGU-09,09,TARGET-10-PATLGU,Phase_II_Validation,Alive,2183,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PATLHH-09,09,TARGET-10-PATLHH,Phase_II_Validation,Alive,2162,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PATLHS-09,09,TARGET-10-PATLHS,Phase_II_Validation,Alive,1553,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATLMA-03,03,TARGET-10-PATLMA,Phase_II_Validation,Alive,87,T Cell ALL,,Primary Blood Derived Cancer - Peripheral Blood,TB,4,normal_splicing,present,-,-
+TARGET-10-PATLNS-09,09,TARGET-10-PATLNS,Phase_II_Validation,Alive,2086,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATLNZ-09,09,TARGET-10-PATLNZ,Phase_II_Validation,Alive,1221,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PATLPN-03,03,TARGET-10-PATLPN,Phase_II_Validation,Alive,2057,T Cell ALL,,Primary Blood Derived Cancer - Peripheral Blood,TB,5,normal_splicing,present,-,-
+TARGET-10-PATLRZ-09,09,TARGET-10-PATLRZ,Phase_II_Validation,Alive,2025,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PATMAF-09,09,TARGET-10-PATMAF,Phase_II_Validation,Alive,1469,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATMRE-09,09,TARGET-10-PATMRE,Phase_II_Validation,Alive,2099,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PATMTV-09,09,TARGET-10-PATMTV,Phase_II_Validation,Alive,2179,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATMVH-09,09,TARGET-10-PATMVH,Phase_II_Validation,Alive,2079,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATMXN-09,09,TARGET-10-PATMXN,Phase_II_Validation,Alive,1191,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PATMYZ-09,09,TARGET-10-PATMYZ,Phase_II_Validation,Alive,2108,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PATNAM-09,09,TARGET-10-PATNAM,Phase_II_Validation,Alive,2156,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PATNIA-09,09,TARGET-10-PATNIA,Phase_II_Validation,Alive,2153,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATPDA-09,09,TARGET-10-PATPDA,Phase_II_Validation,Alive,1815,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PATPGE-09,09,TARGET-10-PATPGE,Phase_II_Validation,Alive,2009,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PATPWF-03,03,TARGET-10-PATPWF,Phase_II_Validation,Alive,1925,T Cell ALL,,Primary Blood Derived Cancer - Peripheral Blood,TB,4,normal_splicing,present,-,-
+TARGET-10-PATRAB-09,09,TARGET-10-PATRAB,Phase_II_Validation,Alive,2146,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATRGV-09,09,TARGET-10-PATRGV,Phase_II_Validation,Dead,1679,T Cell ALL,1679,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATRHL-09,09,TARGET-10-PATRHL,Phase_II_Validation,Alive,2043,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATRNA-09,09,TARGET-10-PATRNA,Phase_II_Validation,Alive,2079,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PATRUN-09,09,TARGET-10-PATRUN,Phase_II_Validation,Alive,101,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PATRXL-09,09,TARGET-10-PATRXL,Phase_II_Validation,Alive,1795,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PATSDS-03,03,TARGET-10-PATSDS,Phase_II_Validation,Alive,2055,T Cell ALL,,Primary Blood Derived Cancer - Peripheral Blood,TB,5,normal_splicing,present,-,-
+TARGET-10-PATSIL-09,09,TARGET-10-PATSIL,Phase_II_Validation,Alive,2030,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,-
+TARGET-10-PATSIY-09,09,TARGET-10-PATSIY,Phase_II_Validation,Alive,2090,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATSLH-09,09,TARGET-10-PATSLH,Phase_II_Validation,Alive,1807,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PATTEE-03,03,TARGET-10-PATTEE,Phase_II_Discovery,Dead,232,B-Precursor,232,Primary Blood Derived Cancer - Peripheral Blood,TB,2,early_termination,present,-,-
+TARGET-10-PATTHR-09,09,TARGET-10-PATTHR,Phase_II_Validation,Alive,2041,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATVDA-03,03,TARGET-10-PATVDA,Phase_II_Validation,Alive,42,T Cell ALL,,Primary Blood Derived Cancer - Peripheral Blood,TB,1,early_termination,present,-,-
+TARGET-10-PATWHB-09,09,TARGET-10-PATWHB,Phase_II_Validation,Alive,1914,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PATWIJ-09,09,TARGET-10-PATWIJ,Phase_II_Validation,Alive,1941,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATWJU-09,09,TARGET-10-PATWJU,Phase_II_Validation,Alive,2013,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATWNL-09,09,TARGET-10-PATWNL,Phase_II_Validation,"",,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PATWXC-09,09,TARGET-10-PATWXC,Phase_II_Validation,Alive,1839,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,-
+TARGET-10-PATWYL-09,09,TARGET-10-PATWYL,Phase_II_Validation,Alive,1838,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATWYZ-09,09,TARGET-10-PATWYZ,Phase_II_Validation,Alive,1973,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATXAL-09,09,TARGET-10-PATXAL,Phase_II_Validation,Alive,235,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PATXKW-03,03,TARGET-10-PATXKW,Phase_II_Validation,Alive,1374,T Cell ALL,,Primary Blood Derived Cancer - Peripheral Blood,TB,5,normal_splicing,present,-,-
+TARGET-10-PATXNK-09,09,TARGET-10-PATXNK,Phase_II_Validation,Alive,1865,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PATXNR-09,09,TARGET-10-PATXNR,Phase_II_Validation,Alive,1869,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATXSK-09,09,TARGET-10-PATXSK,Phase_II_Validation,Alive,1991,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATYCH-09,09,TARGET-10-PATYCH,Phase_II_Validation,Alive,1854,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PATYJK-09,09,TARGET-10-PATYJK,Phase_II_Validation,Alive,1955,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATYMP-09,09,TARGET-10-PATYMP,Phase_II_Validation,Alive,1759,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,-
+TARGET-10-PATYWV-09,09,TARGET-10-PATYWV,Phase_II_Validation,Dead,1649,T Cell ALL,1649,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATZFF-09,09,TARGET-10-PATZFF,Phase_II_Validation,Alive,1832,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATZSL-09,09,TARGET-10-PATZSL,Phase_II_Validation,Alive,1897,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PATZVD-09,09,TARGET-10-PATZVD,Phase_II_Validation,Alive,1908,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PATZWA-03,03,TARGET-10-PATZWA,Phase_II_Validation,Alive,1863,T Cell ALL,,Primary Blood Derived Cancer - Peripheral Blood,TB,5,normal_splicing,present,-,-
+TARGET-10-PATZYC-09,09,TARGET-10-PATZYC,Phase_II_Validation,Alive,1882,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PATZYR-03,03,TARGET-10-PATZYR,Phase_II_Validation,Alive,1903,T Cell ALL,,Primary Blood Derived Cancer - Peripheral Blood,TB,5,normal_splicing,present,-,-
+TARGET-10-PAUACG-09,09,TARGET-10-PAUACG,Phase_II_Validation,Alive,1777,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PAUAFN-09,09,TARGET-10-PAUAFN,Phase_II_Validation,Alive,1854,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PAUAJA-09,09,TARGET-10-PAUAJA,Phase_II_Validation,Alive,1875,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PAUAYB-09,09,TARGET-10-PAUAYB,Phase_II_Validation,Alive,1834,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PAUAZV-09,09,TARGET-10-PAUAZV,Phase_II_Validation,Alive,1807,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PAUBCB-09,09,TARGET-10-PAUBCB,Phase_II_Validation,Alive,1870,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-10-PAUBCT-09,09,TARGET-10-PAUBCT,Phase_II_Validation,Alive,1845,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PAUBLL-09,09,TARGET-10-PAUBLL,Phase_II_Validation,Alive,1914,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PAUBPY-09,09,TARGET-10-PAUBPY,Phase_II_Validation,Alive,1837,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PAUBRD-09,09,TARGET-10-PAUBRD,Phase_II_Validation,"",,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-10-PAUBTC-09,09,TARGET-10-PAUBTC,Phase_II_Validation,Alive,1833,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PAUBXP-09,09,TARGET-10-PAUBXP,Phase_II_Validation,Alive,1747,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PAUCDC-09,09,TARGET-10-PAUCDC,Phase_II_Validation,Alive,1867,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-10-PAUCDY-09,09,TARGET-10-PAUCDY,Phase_II_Validation,Alive,1793,T Cell ALL,,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-15-PAREAT-09,09,TARGET-15-PAREAT,Phase_III,Dead,74,"",74,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-15-PARWPU-09,09,TARGET-15-PARWPU,Phase_III,Alive,1814,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,present,present
+TARGET-15-PARWPU-09,09,TARGET-15-PARWPU,Phase_III,Alive,1814,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,present,present
+TARGET-15-SJMPAL003414-04,04,TARGET-15-SJMPAL003414,Phase_III,Dead,20,"",20,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,4,normal_splicing,present,-,-
+TARGET-15-SJMPAL004013-04,04,TARGET-15-SJMPAL004013,Phase_III,Dead,2510,"",2510,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,5,normal_splicing,present,-,-
+TARGET-15-SJMPAL005001-04,04,TARGET-15-SJMPAL005001,Phase_III,Dead,775,"",775,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,5,normal_splicing,present,-,-
+TARGET-15-SJMPAL011911-03,03,TARGET-15-SJMPAL011911,Phase_III,Alive,2034,"",,Primary Blood Derived Cancer - Peripheral Blood,TB,1,early_termination,present,-,-
+TARGET-15-SJMPAL011911-03,03,TARGET-15-SJMPAL011911,Phase_III,Alive,2034,"",,Primary Blood Derived Cancer - Peripheral Blood,TB,4,normal_splicing,present,-,-
+TARGET-15-SJMPAL011912-09,09,TARGET-15-SJMPAL011912,Phase_III,Alive,3161,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-15-SJMPAL011913-09,09,TARGET-15-SJMPAL011913,Phase_III,Alive,3406,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-15-SJMPAL011914-09,09,TARGET-15-SJMPAL011914,Phase_III,Alive,2813,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,present,present
+TARGET-15-SJMPAL011914-09,09,TARGET-15-SJMPAL011914,Phase_III,Alive,2813,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,present,present
+TARGET-15-SJMPAL011915-09,09,TARGET-15-SJMPAL011915,Phase_III,Dead,198,"",198,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,-
+TARGET-15-SJMPAL012417-09,09,TARGET-15-SJMPAL012417,Phase_III,Dead,53,"",53,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-15-SJMPAL012418-09,09,TARGET-15-SJMPAL012418,Phase_III,"",,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-15-SJMPAL012419-09,09,TARGET-15-SJMPAL012419,Phase_III,Alive,1229,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,present,present
+TARGET-15-SJMPAL012419-09,09,TARGET-15-SJMPAL012419,Phase_III,Alive,1229,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,present,present
+TARGET-15-SJMPAL012420-09,09,TARGET-15-SJMPAL012420,Phase_III,Alive,4185,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-15-SJMPAL012421-09,09,TARGET-15-SJMPAL012421,Phase_III,Alive,1718,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-15-SJMPAL012422-09,09,TARGET-15-SJMPAL012422,Phase_III,Alive,2071,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,-
+TARGET-15-SJMPAL012425-09,09,TARGET-15-SJMPAL012425,Phase_III,Dead,591,"",591,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-15-SJMPAL016340-09,09,TARGET-15-SJMPAL016340,Phase_III,Alive,223,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-15-SJMPAL016342-09,09,TARGET-15-SJMPAL016342,Phase_III,Dead,295,"",295,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,present,present
+TARGET-15-SJMPAL016342-09,09,TARGET-15-SJMPAL016342,Phase_III,Dead,295,"",295,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,present,present
+TARGET-15-SJMPAL016343-09,09,TARGET-15-SJMPAL016343,Phase_III,Dead,511,"",511,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-15-SJMPAL016344-09,09,TARGET-15-SJMPAL016344,Phase_III,Alive,1222,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-15-SJMPAL016447-09,09,TARGET-15-SJMPAL016447,Phase_III,Alive,193,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-15-SJMPAL016448-09,09,TARGET-15-SJMPAL016448,Phase_III,Dead,403,"",403,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-15-SJMPAL017973-09,09,TARGET-15-SJMPAL017973,Phase_III,Alive,,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,3,IK6,present,-,-
+TARGET-15-SJMPAL017975-03,03,TARGET-15-SJMPAL017975,Phase_III,Alive,2927,"",,Primary Blood Derived Cancer - Peripheral Blood,TB,5,normal_splicing,present,present,present
+TARGET-15-SJMPAL017975-03,03,TARGET-15-SJMPAL017975,Phase_III,Alive,2927,"",,Primary Blood Derived Cancer - Peripheral Blood,TB,5,normal_splicing,present,present,present
+TARGET-15-SJMPAL017977-09,09,TARGET-15-SJMPAL017977,Phase_III,Dead,1,"",1,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-15-SJMPAL017978-09,09,TARGET-15-SJMPAL017978,Phase_III,Alive,2921,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-15-SJMPAL017981-03,03,TARGET-15-SJMPAL017981,Phase_III,Alive,307,"",,Primary Blood Derived Cancer - Peripheral Blood,TB,4,normal_splicing,present,-,-
+TARGET-15-SJMPAL019076-04,04,TARGET-15-SJMPAL019076,Phase_III,Alive,5297,"",,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,5,normal_splicing,present,present,present
+TARGET-15-SJMPAL022667-09,09,TARGET-15-SJMPAL022667,Phase_III,Alive,2666,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-15-SJMPAL040024-09,09,TARGET-15-SJMPAL040024,Phase_III,Dead,1033,"",1033,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-15-SJMPAL040025-09,09,TARGET-15-SJMPAL040025,Phase_III,Alive,2130,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,present,-
+TARGET-15-SJMPAL040025-09,09,TARGET-15-SJMPAL040025,Phase_III,Alive,2130,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,-
+TARGET-15-SJMPAL040026-09,09,TARGET-15-SJMPAL040026,Phase_III,Dead,30,"",30,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-15-SJMPAL040027-09,09,TARGET-15-SJMPAL040027,Phase_III,Alive,2590,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-15-SJMPAL040028-04,04,TARGET-15-SJMPAL040028,Phase_III,Alive,3182,"",,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,5,normal_splicing,present,present,present
+TARGET-15-SJMPAL040028-04,04,TARGET-15-SJMPAL040028,Phase_III,Alive,3182,"",,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,5,normal_splicing,present,present,present
+TARGET-15-SJMPAL040030-09,09,TARGET-15-SJMPAL040030,Phase_III,Dead,66,"",66,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-15-SJMPAL040031-09,09,TARGET-15-SJMPAL040031,Phase_III,Alive,2491,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-15-SJMPAL040033-09,09,TARGET-15-SJMPAL040033,Phase_III,Dead,1658,"",1658,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-15-SJMPAL040034-09,09,TARGET-15-SJMPAL040034,Phase_III,Alive,3395,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-15-SJMPAL040035-03,03,TARGET-15-SJMPAL040035,Phase_III,Alive,1975,"",,Primary Blood Derived Cancer - Peripheral Blood,TB,5,normal_splicing,present,-,-
+TARGET-15-SJMPAL040036-03,03,TARGET-15-SJMPAL040036,Phase_III,"",,"",,Primary Blood Derived Cancer - Peripheral Blood,TB,4,normal_splicing,present,present,present
+TARGET-15-SJMPAL040036-03,03,TARGET-15-SJMPAL040036,Phase_III,"",,"",,Primary Blood Derived Cancer - Peripheral Blood,TB,1,early_termination,present,present,present
+TARGET-15-SJMPAL040037-09,09,TARGET-15-SJMPAL040037,Phase_III,Alive,963,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,present,present
+TARGET-15-SJMPAL040037-09,09,TARGET-15-SJMPAL040037,Phase_III,Alive,963,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-15-SJMPAL040038-09,09,TARGET-15-SJMPAL040038,Phase_III,Alive,1167,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,present,present
+TARGET-15-SJMPAL040038-09,09,TARGET-15-SJMPAL040038,Phase_III,Alive,1167,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,present,present
+TARGET-15-SJMPAL040039-09,09,TARGET-15-SJMPAL040039,Phase_III,"",,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,present,present
+TARGET-15-SJMPAL040039-09,09,TARGET-15-SJMPAL040039,Phase_III,"",,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-15-SJMPAL040459-09,09,TARGET-15-SJMPAL040459,Phase_III,Alive,892,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,present
+TARGET-15-SJMPAL040459-09,09,TARGET-15-SJMPAL040459,Phase_III,Alive,892,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,present
+TARGET-15-SJMPAL041117-09,09,TARGET-15-SJMPAL041117,Phase_III,Alive,599,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,present,-
+TARGET-15-SJMPAL041117-09,09,TARGET-15-SJMPAL041117,Phase_III,Alive,599,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,-
+TARGET-15-SJMPAL041118-09,09,TARGET-15-SJMPAL041118,Phase_III,Alive,606,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-15-SJMPAL041119-09,09,TARGET-15-SJMPAL041119,Phase_III,Dead,469,"",469,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,present,present
+TARGET-15-SJMPAL041119-09,09,TARGET-15-SJMPAL041119,Phase_III,Dead,469,"",469,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,present,present
+TARGET-15-SJMPAL041120-09,09,TARGET-15-SJMPAL041120,Phase_III,Dead,880,"",880,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,present,present
+TARGET-15-SJMPAL041120-09,09,TARGET-15-SJMPAL041120,Phase_III,Dead,880,"",880,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-15-SJMPAL041122-09,09,TARGET-15-SJMPAL041122,Phase_III,Alive,323,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-15-SJMPAL042787-09,09,TARGET-15-SJMPAL042787,Phase_III,Dead,60,"",60,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,present,present
+TARGET-15-SJMPAL042787-09,09,TARGET-15-SJMPAL042787,Phase_III,Dead,60,"",60,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,present,present
+TARGET-15-SJMPAL042791-09,09,TARGET-15-SJMPAL042791,Phase_III,Alive,895,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,present,present
+TARGET-15-SJMPAL042791-09,09,TARGET-15-SJMPAL042791,Phase_III,Alive,895,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-15-SJMPAL042792-09,09,TARGET-15-SJMPAL042792,Phase_III,Alive,180,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-15-SJMPAL042793-09,09,TARGET-15-SJMPAL042793,Phase_III,Alive,546,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,present
+TARGET-15-SJMPAL042793-09,09,TARGET-15-SJMPAL042793,Phase_III,Alive,546,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,present
+TARGET-15-SJMPAL042794-09,09,TARGET-15-SJMPAL042794,Phase_III,Dead,25,"",25,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,present,present
+TARGET-15-SJMPAL042794-09,09,TARGET-15-SJMPAL042794,Phase_III,Dead,25,"",25,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-15-SJMPAL042796-09,09,TARGET-15-SJMPAL042796,Phase_III,Alive,1215,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-15-SJMPAL042797-09,09,TARGET-15-SJMPAL042797,Phase_III,Alive,3535,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-15-SJMPAL042798-09,09,TARGET-15-SJMPAL042798,Phase_III,Dead,443,"",443,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-15-SJMPAL042798-09,09,TARGET-15-SJMPAL042798,Phase_III,Dead,443,"",443,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,-
+TARGET-15-SJMPAL042799-09,09,TARGET-15-SJMPAL042799,Phase_III,Dead,486,"",486,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-15-SJMPAL042799-09,09,TARGET-15-SJMPAL042799,Phase_III,Dead,486,"",486,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,-,-
+TARGET-15-SJMPAL042801-09,09,TARGET-15-SJMPAL042801,Phase_III,Alive,1169,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,present
+TARGET-15-SJMPAL042801-09,09,TARGET-15-SJMPAL042801,Phase_III,Alive,1169,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,present
+TARGET-15-SJMPAL042943-09,09,TARGET-15-SJMPAL042943,Phase_III,Dead,740,"",740,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-15-SJMPAL042946-04,04,TARGET-15-SJMPAL042946,Phase_III,Dead,320,"",320,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,6,normal_splicing,present,present,present
+TARGET-15-SJMPAL042946-09,09,TARGET-15-SJMPAL042946,Phase_III,Dead,320,"",320,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,present,present
+TARGET-15-SJMPAL042946-09,09,TARGET-15-SJMPAL042946,Phase_III,Dead,320,"",320,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-15-SJMPAL043505-09,09,TARGET-15-SJMPAL043505,Phase_III,Dead,1562,"",1562,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,present,-
+TARGET-15-SJMPAL043506-04,04,TARGET-15-SJMPAL043506,Phase_III,Dead,769,"",769,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,5,normal_splicing,present,present,present
+TARGET-15-SJMPAL043507-04,04,TARGET-15-SJMPAL043507,Phase_III,"",,"",,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,6,normal_splicing,present,present,present
+TARGET-15-SJMPAL043508-09,09,TARGET-15-SJMPAL043508,Phase_III,Dead,1806,"",1806,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,present,present
+TARGET-15-SJMPAL043509-04,04,TARGET-15-SJMPAL043509,Phase_III,Alive,5938,"",,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,5,normal_splicing,present,-,-
+TARGET-15-SJMPAL043510-09,09,TARGET-15-SJMPAL043510,Phase_III,Dead,39,"",39,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-15-SJMPAL043511-09,09,TARGET-15-SJMPAL043511,Phase_III,"",,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,present
+TARGET-15-SJMPAL043512-09,09,TARGET-15-SJMPAL043512,Phase_III,Alive,1097,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,-,present
+TARGET-15-SJMPAL043513-04,04,TARGET-15-SJMPAL043513,Phase_III,"",,"",,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,6,normal_splicing,present,present,present
+TARGET-15-SJMPAL043514-09,09,TARGET-15-SJMPAL043514,Phase_III,Dead,682,"",682,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-15-SJMPAL043767-09,09,TARGET-15-SJMPAL043767,Phase_III,"",,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-15-SJMPAL043768-09,09,TARGET-15-SJMPAL043768,Phase_III,"",,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,1,early_termination,present,present,present
+TARGET-15-SJMPAL043769-03,03,TARGET-15-SJMPAL043769,Phase_III,Dead,572,"",572,Primary Blood Derived Cancer - Peripheral Blood,TB,6,normal_splicing,present,present,present
+TARGET-15-SJMPAL043770-09,09,TARGET-15-SJMPAL043770,Phase_III,Alive,662,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-15-SJMPAL043771-09,09,TARGET-15-SJMPAL043771,Phase_III,Alive,780,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,present,present
+TARGET-15-SJMPAL043772-04,04,TARGET-15-SJMPAL043772,Phase_III,Dead,771,"",771,Recurrent Blood Derived Cancer - Bone Marrow,TRBM,6,normal_splicing,present,present,present
+TARGET-15-SJMPAL043773-03,03,TARGET-15-SJMPAL043773,Phase_III,Dead,394,"",394,Primary Blood Derived Cancer - Peripheral Blood,TB,6,normal_splicing,present,present,present
+TARGET-15-SJMPAL043773-40,40,TARGET-15-SJMPAL043773,Phase_III,Dead,394,"",394,Recurrent Blood Derived Cancer - Peripheral Blood,TRB,4,normal_splicing,present,-,-
+TARGET-15-SJMPAL043774-09,09,TARGET-15-SJMPAL043774,Phase_III,Dead,156,"",156,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,present,-
+TARGET-15-SJMPAL043775-09,09,TARGET-15-SJMPAL043775,Phase_III,Alive,838,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,6,normal_splicing,present,present,present
+TARGET-15-SJMPAL044948-09,09,TARGET-15-SJMPAL044948,Phase_III,Alive,3439,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-15-SJMPAL044949-09,09,TARGET-15-SJMPAL044949,Phase_III,Alive,2565,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-15-SJMPAL044950-09,09,TARGET-15-SJMPAL044950,Phase_III,Dead,301,"",301,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-15-SJMPAL044953-09,09,TARGET-15-SJMPAL044953,Phase_III,"",,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-15-SJMPAL046466-09,09,TARGET-15-SJMPAL046466,Phase_III,Alive,1767,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-15-SJMPAL046467-09,09,TARGET-15-SJMPAL046467,Phase_III,Dead,1630,"",1630,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-15-SJMPAL046468-09,09,TARGET-15-SJMPAL046468,Phase_III,Alive,1168,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,5,normal_splicing,present,-,-
+TARGET-15-SJMPAL046469-09,09,TARGET-15-SJMPAL046469,Phase_III,Alive,978,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-15-SJMPAL046470-09,09,TARGET-15-SJMPAL046470,Phase_III,Alive,615,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-15-SJMPAL046471-09,09,TARGET-15-SJMPAL046471,Phase_III,Alive,364,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-
+TARGET-15-SJMPAL046472-09,09,TARGET-15-SJMPAL046472,Phase_III,Alive,1275,"",,Primary Blood Derived Cancer - Bone Marrow,TBM,4,normal_splicing,present,-,-

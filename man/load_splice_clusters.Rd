@@ -6,9 +6,6 @@
 \usage{
 load_splice_clusters()
 }
-\value{
-
-}
 \description{
 load_splice_clusters
 }

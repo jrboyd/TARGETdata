@@ -9,9 +9,6 @@ res_file(f)
 \arguments{
 \item{f}{}
 }
-\value{
-
-}
 \description{
 Title
 }

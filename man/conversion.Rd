@@ -14,11 +14,6 @@ convert_matrix_2_data.table(mat)
 
 \item{mat}{}
 }
-\value{
-
-
-
-}
 \description{
 create a matrix from a data.table using gene_id as rownmaes
 }

@@ -6,9 +6,6 @@
 \usage{
 load_ref_gr()
 }
-\value{
-
-}
 \description{
 load_ref_gr
 }

@@ -6,9 +6,6 @@
 \usage{
 load_sample_codes()
 }
-\value{
-
-}
 \description{
 load_sample_codes
 }

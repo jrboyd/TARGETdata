@@ -4,15 +4,17 @@
 \alias{plot_survival_goi}
 \title{plot_survival_goi}
 \usage{
-plot_survival_goi(goi, rpm_mat, meta_dt, title_FUN = function(goi) {
-    goi
-})
+plot_survival_goi(
+  goi,
+  rpm_mat,
+  meta_dt,
+  title_FUN = function(goi) {
+     goi
+ }
+)
 }
 \arguments{
 \item{goi}{}
-}
-\value{
-
 }
 \description{
 plot_survival_goi

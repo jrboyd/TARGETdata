@@ -6,9 +6,6 @@
 \usage{
 get_out_dir()
 }
-\value{
-
-}
 \description{
 Title
 }

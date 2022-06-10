@@ -6,9 +6,6 @@
 \usage{
 load_RNA_RPM()
 }
-\value{
-
-}
 \description{
 load_RNA_RPM
 }

@@ -9,9 +9,6 @@ run_survival(surv_dt, group_var, legend_title = group_var, color = NULL)
 \arguments{
 \item{color}{}
 }
-\value{
-
-}
 \description{
 run_survival
 }

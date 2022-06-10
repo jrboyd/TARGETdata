@@ -9,9 +9,6 @@ convert_sample_id_2_sample_code(ids)
 \arguments{
 \item{ids}{}
 }
-\value{
-
-}
 \description{
 convert_sample_id_2_sample_code
 }

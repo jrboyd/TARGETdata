@@ -6,9 +6,6 @@
 \usage{
 load_miR_RPM()
 }
-\value{
-
-}
 \description{
 load_miR_RPM
 }

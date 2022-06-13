@@ -57,13 +57,13 @@ run_survival_scan.phaseII = function(goi_todo, rpm_mat, analysis_name, meta_dt =
     surv_res_dt = pbmcapply::pbmclapply(goi_todo.sel, mc.cores = n_cores, function(goi){
       goi.name = title_FUN(goi)
 
-      res.disc = surv_fun.z(rpm_mat = rpm_mat,
-                            survival_info = meta_dt[Phase == "Phase_II_Discovery"],
-                            goi = goi, goi.name = goi.name)
+      res.disc = run_survival.goi_zscore(rpm_mat = rpm_mat,
+                                         survival_info = meta_dt[Phase == "Phase_II_Discovery"],
+                                         goi = goi, goi.name = goi.name)
 
-      res.vali = surv_fun.z(rpm_mat = rpm_mat,
-                            survival_info = meta_dt[Phase == "Phase_II_Validation"],
-                            goi = goi, goi.name = goi.name)
+      res.vali = run_survival.goi_zscore(rpm_mat = rpm_mat,
+                                         survival_info = meta_dt[Phase == "Phase_II_Validation"],
+                                         goi = goi, goi.name = goi.name)
       data.table(
         gene_id = goi,
         gene_name = goi.name,
@@ -127,7 +127,7 @@ plot_survival_discovery_vs_validation = function(surv_res_dt, n_labels = 10){
   p_surv.exp
 }
 
-#' plot_survival_goi
+#' plot_survival_goi.phaseII
 #'
 #' @param goi
 #'
@@ -135,15 +135,15 @@ plot_survival_discovery_vs_validation = function(surv_res_dt, n_labels = 10){
 #' @export
 #'
 #' @examples
-plot_survival_goi = function(goi, rpm_mat, meta_dt, title_FUN = function(goi){goi}){
+plot_survival_goi.phaseII = function(goi, rpm_mat, meta_dt, title_FUN = function(goi){goi}){
   goi.name = title_FUN(goi)
-  res.disc = surv_fun.z(rpm_mat = rpm_mat,
-                        survival_info = meta_dt[Phase == "Phase_II_Discovery"],
-                        goi = goi, goi.name = goi.name)
+  res.disc = run_survival.goi_zscore(rpm_mat = rpm_mat,
+                                     survival_info = meta_dt[Phase == "Phase_II_Discovery"],
+                                     goi = goi, goi.name = goi.name)
 
-  res.vali = surv_fun.z(rpm_mat = rpm_mat,
-                        survival_info = meta_dt[Phase == "Phase_II_Validation"],
-                        goi = goi, goi.name = goi.name)
+  res.vali = run_survival.goi_zscore(rpm_mat = rpm_mat,
+                                     survival_info = meta_dt[Phase == "Phase_II_Validation"],
+                                     goi = goi, goi.name = goi.name)
 
   p_disc = res.disc$plots
   p_vali = res.vali$plots
@@ -154,8 +154,8 @@ plot_survival_goi = function(goi, rpm_mat, meta_dt, title_FUN = function(goi){go
     geom_violin() +
     labs(title = goi.name)
   pg = cowplot::plot_grid(nrow = 1,
-    cowplot::plot_grid(p_disc, p_vali, ncol = 1),
-    p_expression
+                          cowplot::plot_grid(p_disc, p_vali, ncol = 1),
+                          p_expression
   )
   list(
     plot = pg,
@@ -171,9 +171,27 @@ plot_survival_goi = function(goi, rpm_mat, meta_dt, title_FUN = function(goi){go
 
 
 
+#' calc_zscore
+#'
+#' @param x
+#' @param apply_log
+#' @param pseudo
+#'
+#' @return z score values
+#' @export
+#'
+#' @examples
+#' calc_zscore(runif(100))
+calc_zscore = function(x, apply_log = TRUE, pseudo = .01){
+  if(apply_log){
+    x = log10(x + pseudo)
+  }
+  z = (x - mean(x)) / sd(x)
+  z[is.nan(z)] = 0
+  z
+}
 
-
-#' surv_fun.z
+#' run_survival.goi_zscore
 #'
 #' @param rpm_mat
 #' @param survival_info
@@ -188,28 +206,29 @@ plot_survival_goi = function(goi, rpm_mat, meta_dt, title_FUN = function(goi){go
 #' @export
 #'
 #' @examples
-surv_fun.z = function(rpm_mat,
-                      survival_info,
-                      goi = "LEF1",
-                      goi.name = goi,
-                      pseudo = .01,
-                      breaks = c(-1,1),
-                      bin_colors = viridisLite::viridis(length(breaks)+1),
-                      return_data_only = FALSE){
+run_survival.goi_zscore = function(rpm_mat,
+                                   survival_info,
+                                   goi = "LEF1",
+                                   goi.name = goi,
+                                   pseudo = .01,
+                                   breaks = c(-1,1),
+                                   bin_colors = viridisLite::viridis(length(breaks)+1),
+                                   return_data_only = FALSE,
+                                   apply_zscore = TRUE){
   breaks = sort(breaks)
 
   common = intersect(colnames(rpm_mat), survival_info$sample_id)
   message("Using ", length(common), " of ", ncol(rpm_mat), " matrix samples")
   message("Using ", length(common), " of ", nrow(survival_info), " survival samples")
 
-  rpm_mat = rpm_mat[, common]
+  rpm_mat = rpm_mat[, common, drop = FALSE]
 
   exp_sub<- data.frame(sample_id = colnames(rpm_mat), counts=rpm_mat[goi,])
-  exp_sub$log_counts = log10(exp_sub$counts + pseudo)
-  exp_sub$z = (exp_sub$log_counts - mean(exp_sub$log_counts)) / sd(exp_sub$log_counts)
-
-  exp_sub$z[is.nan(exp_sub$z)] = 0
-
+  if(apply_zscore){
+    exp_sub$z = calc_zscore(exp_sub$counts, apply_log = TRUE, pseudo = pseudo)
+  }else{
+    exp_sub$z = exp_sub$counts
+  }
   breaks.full = c(-Inf, breaks, Inf)
   rect_dt = rbindlist(lapply(seq_along(breaks.full)[-1], function(i){
     data.table(xmin = breaks.full[i-1], xmax = breaks.full[i], group = as.character(i-1))

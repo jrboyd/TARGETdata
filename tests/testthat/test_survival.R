@@ -22,8 +22,8 @@ test_that("run_survival", {
   expect_is(res1$plot, "ggplot")
 })
 
-test_that("surv_fun.z", {
-  res2 = surv_fun.z(mat_rpm, meta_dt, goi = rownames(mat_rpm)[1])
+test_that("run_survival.goi_zscore", {
+  res2 = run_survival.goi_zscore(mat_rpm, meta_dt, goi = rownames(mat_rpm)[1])
   expect_is(res2$result$pval, "numeric")
   expect_is(res2$result$plot, "ggplot")
   expect_is(res2$plots, "ggplot")
@@ -46,8 +46,8 @@ test_that("run_survival_scan.phaseII", {
 
 
 
-test_that("plot_survival_goi", {
-  res4 = plot_survival_goi(rownames(mat_rpm)[1], mat_rpm, meta_dt)
+test_that("plot_survival_goi.phaseII", {
+  res4 = plot_survival_goi.phaseII(rownames(mat_rpm)[1], mat_rpm, meta_dt)
   expect_is(res4$plot, "ggplot")
   expect_is(res4$plot_parts, "list")
   expect_is(res4$pvals, "data.frame")

@@ -78,11 +78,11 @@ plot_meta_upset = function(meta_dt, vars, plot_title = "", ...){
 TARGETdata.runApp.preload = function(force = FALSE){
   if(!exists("mrna_count_mat.full") | force){
     message("loading RNA counts")
-    mrna_count_mat.full <<- load_RNA_counts()
+    mrna_count_mat.full = load_RNA_counts()
   }
   if(!exists("mrna_rpm_mat.full") | force){
     message("loading RNA RPM")
-    mrna_rpm_mat.full <<- load_RNA_RPM()
+    mrna_rpm_mat.full = load_RNA_RPM()
   }
   if(!exists("mir_count_mat.full") | force){
     message("loading miR counts")
@@ -101,17 +101,22 @@ TARGETdata.runApp.preload = function(force = FALSE){
     message("loading ref_gr")
     ref_gr <<- load_ref_gr()
     conv_dt = data.table(gene_id = ref_gr$gene_id, gene_name = ref_gr$gene_name)
+  }
 
+  if(any(rownames(mrna_count_mat.full) %in% names(ref_gr))){
     tmp = convert_matrix_2_data.table(mrna_count_mat.full)
     tmp = merge(tmp, conv_dt, by = "gene_id")
     tmp = tmp[, .(value = mean(value)), .(sample_id, gene_id = gene_name)]
     mrna_count_mat.full <<- convert_data.table_2_matrix(tmp)
+  }
 
+  if(any(rownames(mrna_rpm_mat.full) %in% names(ref_gr))){
     tmp = convert_matrix_2_data.table(mrna_rpm_mat.full)
     tmp = merge(tmp, conv_dt, by = "gene_id")
     tmp = tmp[, .(value = mean(value)), .(sample_id, gene_id = gene_name)]
     mrna_rpm_mat.full <<- convert_data.table_2_matrix(tmp)
   }
+  "done"
 }
 
 
@@ -182,6 +187,7 @@ TARGETdata.runApp = function(){
     shinyjs::useShinyjs(),
     titlePanel("TARGET data"),
     tabsetPanel(
+      #### Panel: Selection  ####
       tabPanel("Sample Selection",
                # Sidebar with a slider input for number of bins
                sidebarLayout(
@@ -198,11 +204,19 @@ TARGETdata.runApp = function(){
                  )
                )
       ),
+      #### Panel: Gene Query  ####
       tabPanel("Gene Query",
                sidebarLayout(
                  sidebarPanel(
-                   selectizeInput(inputId = "txtGroupVar", label = "Group by", choices = active_filters, selected = "ik_status", multiple = FALSE),
-                   selectizeInput(inputId = "txtGene", label = "Select Genes", choices = NULL, multiple = FALSE),
+                   selectizeInput(inputId = "txtGene",
+                                  label = "Select Genes",
+                                  choices = NULL,
+                                  multiple = FALSE),
+                   selectizeInput(inputId = "txtFacetVar",
+                                  label = "Facet by",
+                                  choices = c("none", active_filters),
+                                  selected = "Phase",
+                                  multiple = FALSE),
                    tippy::tippy_this(
                      "txtGene-container",
                      tooltip = "Delete and start typing gene names to see matching genes."
@@ -211,34 +225,43 @@ TARGETdata.runApp = function(){
 
                  # Show a plot of the generated distribution
                  mainPanel(
-                   shinycssloaders::withSpinner(plotOutput("plotSurvivalGOI", width = "550px", height = "310px")),
-                   tippy::tippy_this(
-                     "plotGOI",
-                     tooltip = paste("scRNAseq UMAP facetted by mutation status of cells with",
-                                     "expression values of the selected gene mapped to color.",
-                                     "Select a different UMAP or gene on the left.",
-                                     "Right-click and save or copy image to export plot.")
-                   ),
+                   uiOutput("uiSurvival"),
+                   # shinycssloaders::withSpinner(plotOutput("plotSurvivalGOI",
+                   #                                         width = "550px", height = "310px")),
                    shinycssloaders::withSpinner(
-                     plotOutput("plotExpressionGOI", width = "550px", height = "310px")
+                     plotOutput("plotExpressionGOI",
+                                width = "550px", height = "310px")
                    )
                  )
                )
       ),
-      tabPanel("Run DE",
-               tabsetPanel(
-                 tabPanel("simple",
-                          actionButton("btn_runDEfast", "Run DE"),
-                          shinycssloaders::withSpinner(plotOutput("plot_volcano", width = "400px", height = "400px")),
-                          shinycssloaders::withSpinner(plotOutput("plot_boxes", width = "400px", height = "400px"))
-
+      tabPanel("Group Query",
+               sidebarLayout(
+                 sidebarPanel(
+                   selectizeInput(inputId = "txtGroupVar", label = "Group by", choices = active_filters, selected = "ik_status", multiple = FALSE)
                  ),
-                 tabPanel("DESeq2",
-                          actionButton("btn_runDE", "Run DE"),
-                          shinycssloaders::withSpinner(DT::dataTableOutput("dt_DE_res"))
+
+                 # Show a plot of the generated distribution
+                 mainPanel(
+                   shinycssloaders::withSpinner(plotOutput("plotSurvivalGroup", width = "550px", height = "500"))
                  )
                )
-      )
+      )#,
+      #### Panel: Group Query  ####
+      # tabPanel("Run DE",
+      #          tabsetPanel(
+      #            tabPanel("simple",
+      #                     actionButton("btn_runDEfast", "Run DE"),
+      #                     shinycssloaders::withSpinner(plotOutput("plot_volcano", width = "400px", height = "400px")),
+      #                     shinycssloaders::withSpinner(plotOutput("plot_boxes", width = "400px", height = "400px"))
+      #
+      #            ),
+      #            tabPanel("DESeq2",
+      #                     actionButton("btn_runDE", "Run DE"),
+      #                     shinycssloaders::withSpinner(DT::dataTableOutput("dt_DE_res"))
+      #            )
+      #          )
+      # )
     )
   )
 
@@ -358,44 +381,133 @@ TARGETdata.runApp = function(){
       message("-update txtGene")
     })
 
+    # uiOutput("uiSurvival"),
+    # # shinycssloaders::withSpinner(plotOutput("plotSurvivalGOI",
+    # #                                         width = "550px", height = "310px")),
+    output$uiSurvival = renderUI({
+      req(meta_dt.sel())
+      req(input$txtFacetVar)
+      if(input$txtFacetVar == "none"){
+        nplot = 1
+      }else{
+        nplot = length(unique(meta_dt.sel()[[input$txtFacetVar]]))
+      }
+      showNotification(paste(nplot, " plots"))
+      shinycssloaders::withSpinner(plotOutput("plotSurvivalGOI",
+                                              width = ifelse(nplot == 1, "600px", "850"),
+                                              height = paste0(300*nplot, "px")))
+    })
+
     # withSpinner(plotOutput("plotSurvivalGOI", width = "550px", height = "310px")),
     # withSpinner(plotOutput("plotExpressionGOI", width = "550px", height = "310px")
     output$plotSurvivalGOI = renderPlot({
+      req(meta_dt.sel())
+      req(rpm_mat())
+      req(input$txtGene)
+      req(input$txtFacetVar)
+      message("plotSurvivalGOI")
+      # res = run_survival(meta_dt.sel(), input$txtFacetVar)
+      # res$plot
+
+      goi = input$txtGene
+      plot_rpm_mat = rpm_mat()
+      plot_meta_dt = meta_dt.sel()
+      facet_var = input$txtFacetVar
+
+      cleanup_survival_plots = function(res, goi, xlim = NULL){
+        p_surv = res$result$plot +
+          guides(color = guide_legend(ncol = 1)) +
+          # theme(legend.position = "bottom") +
+          theme(legend.position = "right") +
+          labs(title = paste0("Survival by ", goi, " expression bin"),
+               color = paste(goi, "z-score"),
+               fill = paste(goi, "z-score"))
+        p_exp = res$expression_plot + guides(fill = "none")
+        if(!is.null(xlim)){
+          p_exp = p_exp + coord_cartesian(xlim = xlim)
+        }
+        pg = cowplot::plot_grid(p_exp, p_surv, rel_widths = c(1, 1.4))
+        pg
+      }
+
+      if(facet_var == "none"){
+        res = run_survival.goi_zscore(plot_rpm_mat, plot_meta_dt, goi)
+        pg = cleanup_survival_plots(res, goi)
+        # p_surv = res$result$plot +
+        #   guides(color = guide_legend(ncol = 1)) +
+        #   theme(legend.position = "bottom") +
+        #   labs(title = paste0("Survival by ", goi, " expression bin"),
+        #        color = paste(goi, "z-score"),
+        #        fill = paste(goi, "z-score"))
+        # p_exp = res$expression_plot + guides(fill = "none")
+        # pg = cowplot::plot_grid(p_exp, p_surv, rel_widths = c(1, 1.4))
+      }else{
+        todo = split(plot_meta_dt, plot_meta_dt[[facet_var]])
+        z_mat = calc_zscore(plot_rpm_mat[goi, , drop = FALSE])
+        plot_parts = lapply(names(todo), function(nam){
+          meta_dt.split = todo[[nam]]
+          res = run_survival.goi_zscore(z_mat, meta_dt.split, goi, apply_zscore = FALSE)
+          # res$plots
+          pg_i = cleanup_survival_plots(res, goi, xlim = range(z_mat))
+          pg_i
+        })
+        plot_labels = lapply(names(todo), function(nam){
+          ggplot() +
+            coord_cartesian(xlim = c(0,1), ylim = c(0,1)) +
+            theme_void() +
+            annotate("text", x= .5, y = .5, label = nam, hjust = .5, vjust = .5)
+        })
+        pg = cowplot::plot_grid(
+          nrow = 1,
+          rel_widths = c(1, 4),
+          cowplot::plot_grid(plotlist = plot_labels, ncol = 1),
+          cowplot::plot_grid(plotlist = plot_parts, ncol = 1)
+        )
+      }
+      pg
+    })
+
+    output$plotSurvivalGroup = renderPlot({
       req(meta_dt.sel())
       req(input$txtGroupVar)
       message("plotSurvivalGOI")
       res = run_survival(meta_dt.sel(), input$txtGroupVar)
       res$plot
-      # selectizeInput(inputId = "txtGroupVar", label = "Group by", selected = "ik_status", multiple = FALSE),
-      # selectizeInput(inputId = "txtGene", label = "Select Genes", choices = NULL, multiple = FALSE),
     })
 
     output$plotExpressionGOI = renderPlot({
       req(input$txtGene)
-      req(input$txtGroupVar)
+      req(input$txtFacetVar)
       req(rpm_mat())
       message("plotExpressionGOI")
 
       goi = input$txtGene
-      cnt_dt = data.table(sample_id = names(mrna_rpm_mat[goi, ]), value = mrna_rpm_mat[goi, ])
+      facet_var = input$txtFacetVar
+      plot_mat = rpm_mat()
+
+      cnt_dt = data.table(sample_id = names(plot_mat[goi, ]), value = plot_mat[goi, ])
       cnt_dt = merge(cnt_dt, meta_dt.sel(), by = 'sample_id')
       cnt_dt[, lg_value := log10(value+.01)]
       # browser()
-      ggplot(cnt_dt, aes_string(x = input$txtGroupVar, y = "lg_value")) +
-        geom_boxplot() +
-        geom_jitter(width = .05) +
-        scale_y_continuous(labels = function(x){
-          ys = 10^(round(x-.01))
-          # k = ys >= 1
-          # ys[k] = round(ys[k])
-          ys
+      if(facet_var == "none"){
+        ggplot() +
+          theme_void() +
+          labs(title = "Nothing to plot when Facet Variable is none.")
+      }else{
+        ggplot(cnt_dt, aes_string(x = facet_var, y = "lg_value")) +
+          geom_boxplot() +
+          geom_jitter(width = .05) +
+          scale_y_continuous(labels = function(x){
+            ys = 10^(round(x-.01))
+            # k = ys >= 1
+            # ys[k] = round(ys[k])
+            ys
           }, breaks = seq(-2, ceiling(max(cnt_dt$lg_value)))+.01) +
-        # scale_color_manual(values = c("WT" = "black", "dF4" = "red")) +
-        cowplot::theme_cowplot() +
-        theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1)) +
-        labs(title = paste(goi, "in bulk RNA-seq"), x = "group", y = "log10 RPM")
-
-
+          # scale_color_manual(values = c("WT" = "black", "dF4" = "red")) +
+          cowplot::theme_cowplot() +
+          theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1)) +
+          labs(title = paste(goi, "expression"), x = "group", y = "log10 RPM")
+      }
     })
   }
 

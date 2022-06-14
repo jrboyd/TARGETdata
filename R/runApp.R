@@ -7,6 +7,15 @@ capitalize <- function(x) {
   sapply(x, function(z) paste(z, collapse = " "))
 }
 
+parse_breaks = function(brks){
+  out = suppressWarnings({
+    as.numeric(strsplit(brks, ",")[[1]])
+  })
+  if(any(is.na(out)) | length(out) == 0)
+    stop("invalid breaks input, must be comma delimited numbers")
+  unique(sort(out))
+}
+
 #' plot_meta_alluvial
 #'
 #' @param meta_dt
@@ -212,6 +221,10 @@ TARGETdata.runApp = function(){
                                   label = "Select Genes",
                                   choices = NULL,
                                   multiple = FALSE),
+                   textInput(inputId = "txtBreaks",
+                             label = "Expression Bin Breaks",
+                             value = "-1,1"),
+                   tags$span(id = "txtBreaksHelp", "breaks must be numeric and comma separated", style="color:red;"),
                    selectizeInput(inputId = "txtFacetVar",
                                   label = "Facet by",
                                   choices = c("none", active_filters),
@@ -348,6 +361,7 @@ TARGETdata.runApp = function(){
     })
     # dpi = 150
     # output$plot_alluvial = renderPlot(width = dpi*4, height = dpi*6, res = dpi, {
+    #### Alluvial Plot ####
     output$plot_alluvial = renderPlot({
       #radioButtons("selMetaPlotType", "Plot Type", choices = c("Alluvial", "UpSet"), selected = "Alluvial"),
       plot_meta_dt = req(meta_dt.sel())
@@ -400,11 +414,32 @@ TARGETdata.runApp = function(){
 
     # withSpinner(plotOutput("plotSurvivalGOI", width = "550px", height = "310px")),
     # withSpinner(plotOutput("plotExpressionGOI", width = "550px", height = "310px")
+
+    exp_breaks = reactiveVal(c(-1, 1))
+
+    observeEvent({
+      input$txtBreaks
+    }, {
+      brks = input$txtBreaks
+      brk_res = tryCatch(
+        expr = {
+          brk_vals = parse_breaks(brks)
+          message(paste(brk_vals, collapse = ", "))
+          shinyjs::hide("txtBreaksHelp")
+          exp_breaks(brk_vals)
+        },
+        error = function(e){
+          shinyjs::show("txtBreaksHelp")
+        }
+      )
+    })
+
     output$plotSurvivalGOI = renderPlot({
       req(meta_dt.sel())
       req(rpm_mat())
       req(input$txtGene)
       req(input$txtFacetVar)
+      req(exp_breaks())
       message("plotSurvivalGOI")
       # res = run_survival(meta_dt.sel(), input$txtFacetVar)
       # res$plot
@@ -413,6 +448,7 @@ TARGETdata.runApp = function(){
       plot_rpm_mat = rpm_mat()
       plot_meta_dt = meta_dt.sel()
       facet_var = input$txtFacetVar
+      brks = exp_breaks()
 
       cleanup_survival_plots = function(res, goi, xlim = NULL){
         p_surv = res$result$plot +
@@ -431,7 +467,7 @@ TARGETdata.runApp = function(){
       }
 
       if(facet_var == "none"){
-        res = run_survival.goi_zscore(plot_rpm_mat, plot_meta_dt, goi)
+        res = run_survival.goi_zscore(plot_rpm_mat, plot_meta_dt, goi, breaks = brks)
         pg = cleanup_survival_plots(res, goi)
         # p_surv = res$result$plot +
         #   guides(color = guide_legend(ncol = 1)) +
@@ -446,7 +482,7 @@ TARGETdata.runApp = function(){
         z_mat = calc_zscore(plot_rpm_mat[goi, , drop = FALSE])
         plot_parts = lapply(names(todo), function(nam){
           meta_dt.split = todo[[nam]]
-          res = run_survival.goi_zscore(z_mat, meta_dt.split, goi, apply_zscore = FALSE)
+          res = run_survival.goi_zscore(z_mat, meta_dt.split, goi, apply_zscore = FALSE, breaks = brks)
           # res$plots
           pg_i = cleanup_survival_plots(res, goi, xlim = range(z_mat))
           pg_i

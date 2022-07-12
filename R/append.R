@@ -25,7 +25,7 @@ make_meta_dt = function(dt,
   }else{
     ids = dt$sample_id
   }
-  meta_dt = data.table(sample_id = ids)
+  meta_dt = data.table::data.table(sample_id = ids)
   meta_dt[, patient_id := convert_sample_id_2_patient_id(sample_id)]
   if(include_all){
     meta_dt = merge(meta_dt, clin_dt, by = "patient_id")
@@ -34,7 +34,7 @@ make_meta_dt = function(dt,
                     clin_dt[, c("patient_id", "Phase", "Vital.Status", "Overall.Survival.Time.in.Days", extra_vars_included), with = FALSE],
                     by = "patient_id")
   }
-  setnames(meta_dt, c("Vital.Status", "Overall.Survival.Time.in.Days"), c("vital_status", "days_to_last_follow_up"))
+  data.table::setnames(meta_dt, c("Vital.Status", "Overall.Survival.Time.in.Days"), c("vital_status", "days_to_last_follow_up"))
   meta_dt[, days_to_death := ifelse(vital_status == "Dead", days_to_last_follow_up, NA) ]
 
   meta_dt[, sample_code := convert_sample_id_2_sample_code(sample_id)]
@@ -68,7 +68,7 @@ filter_expression_to_valid = function(dt, clin_dt = load_clinical_data()){
     }else{
       ids = dt$sample_id
     }
-    meta_dt = data.table(sample_id = ids)
+    meta_dt = data.table::data.table(sample_id = ids)
     meta_dt[, patient_id := convert_sample_id_2_patient_id(sample_id)]
 
     k = meta_dt$patient_id %in% clin_dt$patient_id

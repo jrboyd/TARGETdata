@@ -1,3 +1,79 @@
+#' run_survival_scan
+#'
+#' @param goi_todo Genes to analyze.  Should be rownames of rpm_mat.
+#' @param rpm_mat RPM normalized gene expression.
+#' @param meta_dt result of load_clinical_data()
+#' @param analysis_name Prefix for analysis.
+#' @param n_todo Should just be length of goi_todo
+#' @param n_cores number of cores to use to parallelize processing
+#' @param title_FUN function to run on gene_id to generate a title.
+#'
+#' @return data.table of pvalues for Discovery and Validation
+#' @export
+#'
+#' @examples
+#' mat_rpm = load_RNA_RPM()
+#' clin_dt = load_clinical_data()
+#' meta_dt = make_meta_dt(mat_rpm, clin_dt)
+#' meta_dt = meta_dt[Phase %in% c("Phase_II_Discovery", "Phase_II_Validation", "Dicentric")]
+#' meta_dt[, rnk := frank(runif(.N), ties.method = "first"), .(Phase)]
+#' meta_dt = meta_dt[rnk <= 10]
+#' mat_rpm = filter_expression_to_valid(mat_rpm, meta_dt)
+#' surv_res = run_survival_scan(goi_todo = rownames(mat_rpm)[1:5],
+#'     rpm_mat = mat_rpm,
+#'     meta_dt = meta_dt,
+#'     analysis_name = "test",
+#'     n_cores = 1, force = TRUE)
+run_survival_scan = function(goi_todo,
+                             rpm_mat,
+                             analysis_name,
+                             selected_phases = c("Phase_II_Validation", "Phase_II_Discovery", "Dicentric"),
+                             meta_dt = load_clinical_data(),
+                             n_cores = getOption("mc.cores", 1),
+                             title_FUN = function(goi){goi},
+                             force = FALSE){
+  meta_dt = meta_dt[Phase %in% selected_phases]
+
+  phase_tab = table(meta_dt$Phase)
+  if(length(phase_tab) < length(selected_phases)){
+    stop(paste(selected_phases, collapse = " and "), " must be present in Phase of meta_dt")
+  }
+  surv_cache = res_file(paste0(analysis_name, ".survival_scan.", length(goi_todo), ".csv"))
+
+  if(file.exists(surv_cache) & ! force){
+    message("loading cached results")
+    surv_res_dt = fread(surv_cache)
+  }else{
+    already_done = dir(res_file(""), pattern = paste0(analysis_name, ".survival_scan..+.csv$"), full.names = TRUE)
+
+    message("running survival for ", length(goi_todo), " genes")
+    names(selected_phases) = selected_phases
+
+    surv_res_dt = pbmcapply::pbmclapply(goi_todo, mc.cores = n_cores, function(goi){
+      goi.name = title_FUN(goi)
+
+      surv_res = lapply(selected_phases, function(sel_phase){
+        res = run_survival.goi_zscore(rpm_mat = rpm_mat,
+                                      survival_info = meta_dt[Phase == sel_phase],
+                                      goi = goi, goi.name = goi.name)
+        data.table::data.table(
+          gene_id = goi,
+          gene_name = goi.name,
+          pval = res$result$pval,
+          phase = sel_phase)
+      })
+      data.table::dcast(rbindlist(surv_res), gene_id+gene_name~phase, value.var = "pval")
+    })
+
+    k = sapply(surv_res_dt, function(x)class(x)[1]) == "data.table"
+    surv_res_dt = rbindlist(surv_res_dt[k])
+
+    fwrite(surv_res_dt, surv_cache)
+  }
+  surv_res_dt
+}
+
+
 #' run_survival_scan.phaseII
 #'
 #' @param goi_todo Genes to analyze.  Should be rownames of rpm_mat.
@@ -64,7 +140,7 @@ run_survival_scan.phaseII = function(goi_todo, rpm_mat, analysis_name, meta_dt =
       res.vali = run_survival.goi_zscore(rpm_mat = rpm_mat,
                                          survival_info = meta_dt[Phase == "Phase_II_Validation"],
                                          goi = goi, goi.name = goi.name)
-      data.table(
+      data.table::data.table(
         gene_id = goi,
         gene_name = goi.name,
         discovery = res.disc$result$pval,
@@ -148,7 +224,7 @@ plot_survival_goi.phaseII = function(goi, rpm_mat, meta_dt, title_FUN = function
   p_disc = res.disc$plots
   p_vali = res.vali$plots
 
-  rpm_dt = as.data.table(reshape2::melt(rpm_mat[goi,]), keep.rownames = "sample_id")
+  rpm_dt = data.table::as.data.table(reshape2::melt(rpm_mat[goi,]), keep.rownames = "sample_id")
   rpm_dt = merge(rpm_dt, meta_dt, by = "sample_id")
   p_expression = ggplot(rpm_dt, aes(x = Phase, y = log2(value+.01))) +
     geom_violin() +
@@ -231,7 +307,7 @@ run_survival.goi_zscore = function(rpm_mat,
   }
   breaks.full = c(-Inf, breaks, Inf)
   rect_dt = rbindlist(lapply(seq_along(breaks.full)[-1], function(i){
-    data.table(xmin = breaks.full[i-1], xmax = breaks.full[i], group = as.character(i-1))
+    data.table::data.table(xmin = breaks.full[i-1], xmax = breaks.full[i], group = as.character(i-1))
   }))
 
   if(!return_data_only){

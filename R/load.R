@@ -83,7 +83,7 @@ load_RNA_RPM = function(){
   exp_rpm_dt = data.table::as.data.table(reshape2::melt(exp_cnt_dt, id.vars = "gene_id"))
   data.table::setnames(exp_rpm_dt, c("gene_id", "sample_id", "value"))
   exp_rpm_dt[, rpm := value / sum(value) * 1e6, list(sample_id)]
-  exp_rpm_dt = dcast(exp_rpm_dt, gene_id~sample_id, value.var = "rpm")
+  exp_rpm_dt = data.table::dcast(exp_rpm_dt, gene_id~sample_id, value.var = "rpm")
   convert_data.table_2_matrix(exp_rpm_dt[])
 }
 
@@ -109,7 +109,7 @@ load_ref_gr = function(){
 #' load_splice_clusters()
 load_splice_clusters = function(){
   splice_clust_dt = data.table::fread(file.path(data_path, "TARGET_IKZF1_splicing_clusters.csv"))
-  splice_clust_dt[, sample_id := tstrsplit(sample, "\\.", keep = 3)]
+  splice_clust_dt[, sample_id := data.table::tstrsplit(sample, "\\.", keep = 3)]
   splice_clust_dt[, ik_status := "normal_splicing"]
   splice_clust_dt[cluster_id == 3, ik_status := "IK6"]
   splice_clust_dt[cluster_id %in% c(1, 2), ik_status := "early_termination"]
@@ -136,7 +136,7 @@ load_splice_clusters = function(){
 #' vcf_dt = wgs_desc$vcf_dt
 #' vcf_dt.dbl = vcf_dt[group == "double_sample"]
 #' vcf_dt.dbl[, ids := sub("_TARG", " TARG", ids)]
-#' sample_ids.dbl = unique(unlist(vcf_dt.dbl[, tstrsplit(ids, " ")]))
+#' sample_ids.dbl = unique(unlist(vcf_dt.dbl[, data.table::tstrsplit(ids, " ")]))
 #'
 #' seqsetvis::ssvFeatureVenn(list(
 #'   double = sample_ids.dbl,
@@ -149,7 +149,7 @@ load_wgs_ids = function(){
 
   all_vcf.samples = all_vcf[grepl("TARGET", basename(all_vcf))]
 
-  vcf_dt = data.table(file = all_vcf.samples)
+  vcf_dt = data.table::data.table(file = all_vcf.samples)
 
   vcf_dt[, ids := sub("\\..+", "", basename(file))]
   vcf_dt[, code := TARGETdata::convert_sample_id_2_sample_code(ids)]
@@ -162,7 +162,7 @@ load_wgs_ids = function(){
   vcf_dt.ok = vcf_dt[!grepl("-", suffix)]
 
   while(nrow(vcf_dt.need_fix) > 0){
-    vcf_dt.need_fix[, fix := tstrsplit(suffix, "\\.", keep = 2)]
+    vcf_dt.need_fix[, fix := data.table::tstrsplit(suffix, "\\.", keep = 2)]
     vcf_dt.need_fix[, ids := paste0(ids, ".", fix)]
     vcf_dt.need_fix[, suffix := sub(paste0(".", fix), "", suffix), .(file)]
     vcf_dt.need_fix$fix = NULL
@@ -201,9 +201,9 @@ load_wgs_fusion = function(){
       dt = rbindlist(lapply(as.list(dt), function(x)data.table(x)))
       dt = dt[x != ""]
     }
-    setnames(dt, "content")
-    dt = dt[, tstrsplit(content, "[_|]")]
-    setnames(dt, c("type", "posA", "posB", "geneA", "geneB", "dunno"))
+    data.table::setnames(dt, "content")
+    dt = dt[, data.table::tstrsplit(content, "[_|]")]
+    data.table::setnames(dt, c("type", "posA", "posB", "geneA", "geneB", "dunno"))
     dt
   })
   fusion_dt = rbindlist(dtl, idcol = "patient_id")

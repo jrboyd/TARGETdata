@@ -85,6 +85,16 @@ plot_meta_upset = function(meta_dt, vars, plot_title = "", ...){
 #'
 #' @examples
 TARGETdata.runApp.preload = function(force = FALSE){
+  for(req_lib in c("data.table",
+                   "ggalluvial",
+                   "ggplot2",
+                   "shiny")){
+    if(!req_lib %in% (.packages())){
+      library(req_lib, character.only = TRUE)
+    }
+  }
+
+
   if(!exists("mrna_count_mat.full") | force){
     message("loading RNA counts")
     mrna_count_mat.full = load_RNA_counts()
@@ -104,14 +114,14 @@ TARGETdata.runApp.preload = function(force = FALSE){
   if(!exists("clin_dt") | force){
     message("loading clin_dt")
     clin_dt <<- load_clinical_data()
-    setnames(clin_dt, "Cell.of.Origin", "cell_of_origin")
+    data.table::setnames(clin_dt, "Cell.of.Origin", "cell_of_origin")
   }
   if(!exists("ref_gr") | force){
     message("loading ref_gr")
     ref_gr <<- load_ref_gr()
-    conv_dt = data.table(gene_id = ref_gr$gene_id, gene_name = ref_gr$gene_name)
-  }
 
+  }
+  conv_dt = data.table::data.table(gene_id = ref_gr$gene_id, gene_name = ref_gr$gene_name)
   if(any(rownames(mrna_count_mat.full) %in% names(ref_gr))){
     tmp = convert_matrix_2_data.table(mrna_count_mat.full)
     tmp = merge(tmp, conv_dt, by = "gene_id")
@@ -521,7 +531,7 @@ TARGETdata.runApp = function(){
       facet_var = input$txtFacetVar
       plot_mat = rpm_mat()
 
-      cnt_dt = data.table(sample_id = names(plot_mat[goi, ]), value = plot_mat[goi, ])
+      cnt_dt = data.table::data.table(sample_id = names(plot_mat[goi, ]), value = plot_mat[goi, ])
       cnt_dt = merge(cnt_dt, meta_dt.sel(), by = 'sample_id')
       cnt_dt[, lg_value := log10(value+.01)]
       # browser()

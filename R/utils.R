@@ -55,7 +55,7 @@ convert_sample_id_2_sample_code = function(ids){
 #' mat2 = convert_data.table_2_matrix(dt)
 convert_data.table_2_matrix = function(dt){
   if(!is.null(dt$sample_id)){
-    dt.wide = dcast(dt, gene_id~sample_id)
+    dt.wide = data.table::dcast(dt, gene_id~sample_id)
   }else{
     dt.wide = dt
   }
@@ -75,7 +75,7 @@ convert_data.table_2_matrix = function(dt){
 #' @rdname conversion
 convert_matrix_2_data.table = function(mat){
   dt = data.table::as.data.table(reshape2::melt(mat))
-  setnames(dt, c("gene_id", "sample_id", "value"))
+  data.table::setnames(dt, c("gene_id", "sample_id", "value"))
   dt[]
 }
 

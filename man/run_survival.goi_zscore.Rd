@@ -12,7 +12,8 @@ run_survival.goi_zscore(
   pseudo = 0.01,
   breaks = c(-1, 1),
   bin_colors = viridisLite::viridis(length(breaks) + 1),
-  return_data_only = FALSE
+  return_data_only = FALSE,
+  apply_zscore = TRUE
 )
 }
 \arguments{

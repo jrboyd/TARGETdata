@@ -84,7 +84,7 @@ plot_meta_upset = function(meta_dt, vars, plot_title = "", ...){
 #' @export
 #'
 #' @examples
-TARGETdata.runApp.preload = function(force = FALSE){
+TARGETdata.runApp.preload = function(force = FALSE, cache_path = NULL){
   for(req_lib in c("data.table",
                    "ggalluvial",
                    "ggplot2",
@@ -94,47 +94,66 @@ TARGETdata.runApp.preload = function(force = FALSE){
     }
   }
 
+  .get_cache_path = function(obj_name){
+    if(is.null(cache_path)){
+      "/dev/null/not_a_file"
+    }else{
+      file.path(cache_path, paste0(obj_name, ".Rds"))
+    }
+  }
+  .saveRDS = function(obj, file){
+    if(!is.null(cache_path)){
+      saveRDS(obj, file = file)
+    }
+  }
 
-  if(!exists("mrna_count_mat.full") | force){
-    message("loading RNA counts")
-    mrna_count_mat.full = load_RNA_counts()
+  .cached_load = function(obj_name, msg, FUN){
+    if(!exists(obj_name) | force){
+      c_file = .get_cache_path(obj_name)
+      message(msg)
+      if(file.exists(c_file)){
+        obj = readRDS(c_file)
+      }else{
+        obj = FUN()
+        .saveRDS(obj, file = c_file)
+      }
+      assign(obj_name, obj, envir = .GlobalEnv)
+    }
+    invisible(c_file)
   }
-  if(!exists("mrna_rpm_mat.full") | force){
-    message("loading RNA RPM")
-    mrna_rpm_mat.full = load_RNA_RPM()
-  }
-  if(!exists("mir_count_mat.full") | force){
-    message("loading miR counts")
-    mir_count_mat.full <<- load_miR_counts()
-  }
-  if(!exists("mir_rpm_mat.full") | force){
-    message("loading miR RPM")
-    mir_rpm_mat.full <<- load_miR_RPM()
-  }
-  if(!exists("clin_dt") | force){
-    message("loading clin_dt")
-    clin_dt <<- load_clinical_data()
+
+  .cached_load("mir_count_mat.full", "loading miR counts", load_miR_counts)
+  .cached_load("mir_rpm_mat.full", "loading miR RPM", load_miR_RPM)
+  .cached_load("clin_dt", "loading clin_dt", function(){
+    clin_dt = load_clinical_data()
     data.table::setnames(clin_dt, "Cell.of.Origin", "cell_of_origin")
-  }
-  if(!exists("ref_gr") | force){
-    message("loading ref_gr")
-    ref_gr <<- load_ref_gr()
+    clin_dt
+  })
+  .cached_load("ref_gr", "loading ref_gr", load_ref_gr)
 
-  }
   conv_dt = data.table::data.table(gene_id = ref_gr$gene_id, gene_name = ref_gr$gene_name)
-  if(any(rownames(mrna_count_mat.full) %in% names(ref_gr))){
-    tmp = convert_matrix_2_data.table(mrna_count_mat.full)
-    tmp = merge(tmp, conv_dt, by = "gene_id")
-    tmp = tmp[, .(value = mean(value)), .(sample_id, gene_id = gene_name)]
-    mrna_count_mat.full <<- convert_data.table_2_matrix(tmp)
-  }
 
-  if(any(rownames(mrna_rpm_mat.full) %in% names(ref_gr))){
-    tmp = convert_matrix_2_data.table(mrna_rpm_mat.full)
-    tmp = merge(tmp, conv_dt, by = "gene_id")
-    tmp = tmp[, .(value = mean(value)), .(sample_id, gene_id = gene_name)]
-    mrna_rpm_mat.full <<- convert_data.table_2_matrix(tmp)
-  }
+  .cached_load("mrna_count_mat.full", "loading RNA counts", function(){
+    mrna_count_mat.full = load_RNA_counts()
+    if(any(rownames(mrna_count_mat.full) %in% names(ref_gr))){
+      tmp = convert_matrix_2_data.table(mrna_count_mat.full)
+      tmp = merge(tmp, conv_dt, by = "gene_id")
+      tmp = tmp[, .(value = mean(value)), .(sample_id, gene_id = gene_name)]
+      mrna_count_mat.full = convert_data.table_2_matrix(tmp)
+    }
+    mrna_count_mat.full
+  })
+
+  .cached_load("mrna_rpm_mat.full", "loading RNA RPM", function(){
+    mrna_rpm_mat.full = load_RNA_RPM()
+    if(any(rownames(mrna_rpm_mat.full) %in% names(ref_gr))){
+      tmp = convert_matrix_2_data.table(mrna_rpm_mat.full)
+      tmp = merge(tmp, conv_dt, by = "gene_id")
+      tmp = tmp[, .(value = mean(value)), .(sample_id, gene_id = gene_name)]
+      mrna_rpm_mat.full = convert_data.table_2_matrix(tmp)
+    }
+    mrna_rpm_mat.full
+  })
   "done"
 }
 
